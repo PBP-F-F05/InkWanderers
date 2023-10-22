@@ -1,0 +1,1202 @@
+[
+  {
+    "pk": 1,
+    "model": "book.book",
+    "fields": {
+      "title": "Spider's Web",
+      "authors": "Charles Osborne;Agatha Christie",
+      "categories": "Detective and mystery stories",
+      "thumbnail": "http://books.google.com/books/content?id=gA5GPgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "A new 'Christie for Christmas' -- a full-length novel adapted from her acclaimed play by Charles Osborne Following BLACK COFFEE and THE UNEXPECTED GUEST comes the final Agatha Christie play novelisation, bringing her superb storytelling to a new legion of fans. Clarissa, the wife of a Foreign Office diplomat, is given to daydreaming. 'Supposing I were to come down one morning and find a dead body in the library, what should I do?' she muses. Clarissa has her chance to find out when she discovers a body in the drawing-room of her house in Kent. Desperate to dispose of the body before her husband comes home with an important foreign politician, Clarissa persuades her three house guests to become accessories and accomplices. It seems that the murdered man was not unknown to certain members of the house party (but which ones?), and the search begins for the murderer and the motive, while at the same time trying to persuade a police inspector that there has been no murder at all... SPIDER'S WEB was written in 1954 specifically for Margaret Lockwood and opened first at the Theatre Royal Nottingham before moving to the Savoy Theatre in London on 14 December 1954. With THE MOUSETRAP and WI",
+      "published_year": 2000.0
+    }
+  },
+  {
+    "pk": 2,
+    "model": "book.book",
+    "fields": {
+      "title": "Empires of the Monsoon",
+      "authors": "Richard Hall",
+      "categories": "Africa, East",
+      "thumbnail": "http://books.google.com/books/content?id=MuPEQgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Until Vasco da Gama discovered the sea-route to the East in 1497-9 almost nothing was known in the West of the exotic cultures and wealth of the Indian Ocean and its peoples. It is this civilization and its destruction at the hands of the West that Richard Hall recreates in this book. Hall's history of the exploration and exploitation by Chinese and Arab travellers, and by the Portuguese, Dutch and British alike is one of brutality, betrayal and colonial ambition.",
+      "published_year": 1998.0
+    }
+  },
+  {
+    "pk": 3,
+    "model": "book.book",
+    "fields": {
+      "title": "The Gap Into Madness",
+      "authors": "Stephen R. Donaldson",
+      "categories": "Hyland, Morn (Fictitious character)",
+      "thumbnail": "http://books.google.com/books/content?id=4oXavLNDWocC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "A new-cover reissue of the fourth book in the bestselling five-volume sf series created by the world-famous author of the Thomas Covenant chronicles -- and acclaimed as the 'best work of his career'. Events were not moving as the Amnion had intended. Once again humans had been false in their dealings with the aliens. As the planetoid Thanatos Minor exploded into atoms, the Trumpet hurtled into space only one step ahead of hostile pursuers. On board were Morn Hyland and her force-grown son Davies, cyborg Angus Thermopyle and Captain Nick Succorso -- old enemies thrown together in a desperate bid for survival. For both the Amnion and the UMCP, the immediate capture of the fleeing ship and the secrets it contained was imperative. But for Trumpet's exhausted crew the only hope lay in an illegal lab in the distant binary solar system of Valdor Industrial. It would be a journey of unpredictable danger -- from which not all would return...",
+      "published_year": 1994.0
+    }
+  },
+  {
+    "pk": 4,
+    "model": "book.book",
+    "fields": {
+      "title": "Miss Marple",
+      "authors": "Agatha Christie",
+      "categories": "Detective and mystery stories, English",
+      "thumbnail": "http://books.google.com/books/content?id=a96qPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Miss Marple featured in 20 short stories, published in a number of different collections in Britain and America. Presented here in their order of publication, Miss Marple uses her unique insight to deduce the truth about a series of unsolved crimes.",
+      "published_year": 1997.0
+    }
+  },
+  {
+    "pk": 5,
+    "model": "book.book",
+    "fields": {
+      "title": "'Tis",
+      "authors": "Frank McCourt",
+      "categories": "Ireland",
+      "thumbnail": "http://books.google.com/books/content?id=Q3BhQgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "FROM THE PULIZER PRIZE-WINNING AUTHOR OF THE #1 \"NEW YORK TIMES\" BESTSELLER \"ANGELA'S ASHES\" Frank McCourt's glorious childhood memoir, \"Angela's Ashes, \" has been loved and celebrated by readers everywhere. It won the National Book Critics Circle Award, the \"Los Angeles Times\" Book Award and the Pulitzer Prize. Rarely has a book so swiftly found its place on the literary landscape. And now we have \"'Tis, \" the story of Frank's American journey from impoverished immigrant to brilliant teacher and raconteur. Frank lands in New York at age nineteen and gets a job at the Biltmore Hotel, where he immediately encounters the vivid hierarchies of this \"classless country,\" and then is drafted into the army and is sent to Germany to train dogs and type reports. It is Frank's incomparable voice that renders these experiences spellbinding. When Frank returns to America in 1953, he works on the docks, always resisting what everyone tells him. He knows that he should be getting an education, and though he left school at fourteen, he talks his way into New York University. There, he falls in love with the quintessential Yankee and tries to live his dream. But it is not until he starts to teach that Frank finds his place in the world.",
+      "published_year": 2000.0
+    }
+  },
+  {
+    "pk": 6,
+    "model": "book.book",
+    "fields": {
+      "title": "A Small Pinch of Weather",
+      "authors": "Joan Aiken",
+      "categories": "Children's stories, English",
+      "thumbnail": "http://books.google.com/books/content?id=QiFhOBpYZoYC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "A magical and fantastic collection of early stories by one of the most original children's authors of the 20th century. For 8-11 year olds.",
+      "published_year": 2000.0
+    }
+  },
+  {
+    "pk": 7,
+    "model": "book.book",
+    "fields": {
+      "title": "Tree and Leaf",
+      "authors": "John Ronald Reuel Tolkien",
+      "categories": "Literary Collections",
+      "thumbnail": "http://books.google.com/books/content?id=aPb_AAIcwZ0C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "The two works 'On fairy-stories' and 'Leaf by Niggle' were first brought together to form the book 'Tree and leaf' in 1964. In this new edition a third element is added: the poem Mythopoeia, the making of myths...\"--Preface",
+      "published_year": 2001.0
+    }
+  },
+  {
+    "pk": 8,
+    "model": "book.book",
+    "fields": {
+      "title": "The Lord of the Rings, the Return of the King",
+      "authors": "Jude Fisher",
+      "categories": "Imaginary wars and battles",
+      "thumbnail": "http://books.google.com/books/content?id=kNBnQgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "A visual guide to the third in the Lord of the Rings movie trilogy. A large-format, full-colour guide to the characters, places, landscapes, artefacts, battles, and costumes as seen in the film, it features images, informative text and specially commissioned extras.",
+      "published_year": 2003.0
+    }
+  },
+  {
+    "pk": 9,
+    "model": "book.book",
+    "fields": {
+      "title": "The Lord of the Rings",
+      "authors": "Gary Russell",
+      "categories": "Characters and characteristics in motion pictures",
+      "thumbnail": "http://books.google.com/books/content?id=oEZ6AAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "With complete access to artwork created over a five-year period, this guide illustrates the creative development of The Return of the King. It contains over 600 images, from the earliest pencil sketches and conceptual drawings to magnificent paintings, sculptures and digital imagery that shaped the look of the film. Contributing artists include John Howe and Alan Lee, artists who have inspired Peter Jackson's vision of Middle-earth and worked with him to bring the trilogy to the big screen. Peter Jackson himself provides the afterword in which he discusses the importance of the conceptual art to the film. It covers most aspects of the eagerly awaited finale to the enormously successful trilogy, from locations and costumes to weaponry and creatures. The artists who created all of these diverse elements explain how they contributed to the development of the film.",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 10,
+    "model": "book.book",
+    "fields": {
+      "title": "Lirael",
+      "authors": "Garth Nix",
+      "categories": "Fantasy fiction",
+      "thumbnail": "http://books.google.com/books/content?id=sDzU8TpKvQAC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "When a dangerous necromancer threatens to unleash a long-buried evil, Lirael and Prince Sameth are drawn into a battle to save the Old Kingdom and reveal their true destinies. Suggested level: secondary.",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 11,
+    "model": "book.book",
+    "fields": {
+      "title": "Breaking Open the Head",
+      "authors": "Daniel Pinchbeck",
+      "categories": "Hallucinogenic drugs",
+      "thumbnail": "http://books.google.com/books/content?id=QIMaviqqoQoC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "A new 'The Doors of Perception' for the 21st century? A visionary journey from cynicism to shamanism by a brilliant young US writer.",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 12,
+    "model": "book.book",
+    "fields": {
+      "title": "The Yiddish Policemen's Union",
+      "authors": "Michael Chabon",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=-reD1g77BfsC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "For sixty years, Jewish refugees and their descendants have prospered in the Federal District of Sitka, a \"temporary\" safe haven created in the wake of revelations of the Holocaust and the shocking 1948 collapse of the fledgling state of Israel. Proud, grateful, and longing to be American, the Jews of the Sitka District have created their own little world in the Alaskan panhandle, a vibrant, gritty, soulful, and complex frontier city that moves to the music of Yiddish. For sixty years they have been left alone, neglected and half-forgotten in a backwater of history. Now the District is set to revert to Alaskan control, and their dream is coming to an end: once again the tides of history threaten to sweep them up and carry them off into the unknown. But homicide detective Meyer Landsman of the District Police has enough problems without worrying about the upcoming Reversion. His life is a shambles, his marriage a wreck, his career a disaster. He and his half-Tlingit partner, Berko Shemets, can't catch a break in any of their outstanding cases. Landsman's new supervisor is the love of his life—and also his worst nightmare. And in the cheap hotel where he has washed up, someone has just committed a murder—right under Landsman's nose. Out of habit, obligation, and a mysterious sense that it somehow offers him a shot at redeeming himself, Landsman begins to investigate the killing of his neighbor, a former chess prodigy. But when word comes down from on high that the case is to be dropped immediately, Landsman soon finds himself contending with all the powerful forces of faith, obsession, hopefulness, evil, and salvation that are his heritage—and with the unfinished business of his marriage to Bina Gelbfish, the one person who understands his darkest fears. At once a gripping whodunit, a love story, an homage to 1940s noir, and an exploration of the mysteries of exile and redemption, The Yiddish Policemen's Union is a novel only Michael Chabon could have written.",
+      "published_year": 2007.0
+    }
+  },
+  {
+    "pk": 13,
+    "model": "book.book",
+    "fields": {
+      "title": "The Return of the King",
+      "authors": "J. R. R. Tolkien",
+      "categories": "Baggins, Frodo (Fictitious character)",
+      "thumbnail": "http://books.google.com/books/content?id=PI9zPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "THE GREATEST FANTASY EPIC OF OUR TIME While the evil might of the Dark Lord Sauron swarmed out to conquer all Middle-earth, Frodo and Sam struggled deep into Mordor, seat of Sauron's power. To defeat the Dark Lord, the accursed Ring of Power had to be destroyed in the fires of Mount Doom. But the way was impossibly hard, and Frodo was weakening. Weighed down by the compulsion of the Ring he began finally to despair. The awesome conclusion of J.R.R. Tolkien's The Lord of the Rings, beloved by millions of readers around the world.",
+      "published_year": 2003.0
+    }
+  },
+  {
+    "pk": 14,
+    "model": "book.book",
+    "fields": {
+      "title": "Poirot",
+      "authors": "Agatha Christie",
+      "categories": "Authors",
+      "thumbnail": "http://books.google.com/books/content?id=lbOOJGLxM9MC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "The final POIROT omnibus, featuring the last four appearances of the detective's side-kick, the sleuthing crime novelist Ariadne Oliver: Third Girl, Hallowe'en Party, Elephants Can Remember and The Pale Horse. Poirot and Mrs Oliver continue their sleuthing in the 1960s in four uncharacteristically 'modern' novels with an added twist of danger...Third Girl Poirot finally admits he is growing old as a perplexed girl thinks she may have killed someone. Here Christie dragged Poirot into the swinging 60s and effectively squared him up against a world featuring sex, drugs and hippies. Hallowe'en Party A teenage murder witness is drowned in a tub of apples. This was only the second time Christie wrote about the death of a child, and is all the more engrossing for it. Elephants Can Remember An old husband and wife double murder has never been solved -- until now. This was the very last Poirot story that Agatha Christie wrote, and garnered good reviews. The Pale Horse A priest's death leads to sinister goings-on in an old country inn. This bonus novel featured Mrs Oliver for once without Poirot and was one of Christie's darkest stories, blending witchcraft and murder.",
+      "published_year": 2005.0
+    }
+  },
+  {
+    "pk": 15,
+    "model": "book.book",
+    "fields": {
+      "title": "Discover Your Destiny with the Monk Who Sold His Ferrari",
+      "authors": "Robin Sharma",
+      "categories": "Conduct of life",
+      "thumbnail": "http://books.google.com/books/content?id=4hVbNc8rRfEC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "A potent pathway to self-awakening that will help you to live your greatest life and claim the happiness, prosperity and inner peace that you deserve. From the author of the international bestseller, The Monk Who Sold His Ferrari.",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 16,
+    "model": "book.book",
+    "fields": {
+      "title": "Naked Lunch",
+      "authors": "William S. Burroughs",
+      "categories": "Alienation (Social psychology)",
+      "thumbnail": "http://books.google.com/books/content?id=1B36S7t4k5AC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "The anarchic, phenomenally strong-selling classic from the godfather of the Beats: revitalised with a cool new jacket. WELCOME TO INTERZONE...Say hello to Bradley the Buyer, the best narcotics agent in the business. Attend international playboy A.J.'s annual party, where the punch is to be treated with extreme caution. Meet Dr 'Fingers' Schafer, the Lobotomy Kid and his giant centipede, 'The Complete American De-anxietized Man.' And enter the dark and infernal mind of Bill Lee as he pursues his daily quest for the ultimate merchandise...Provocative, influential, morbidly fascinating, Naked Lunch is an apocalyptic ride through the darker recesses of the human psyche.",
+      "published_year": 2005.0
+    }
+  },
+  {
+    "pk": 17,
+    "model": "book.book",
+    "fields": {
+      "title": "Close Range",
+      "authors": "Annie Proulx",
+      "categories": "Cowboys",
+      "thumbnail": "http://books.google.com/books/content?id=f-zI3bgDiCAC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "The title story in this collection of shorts now a film from Ang Lee.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 18,
+    "model": "book.book",
+    "fields": {
+      "title": "The Love of the Last Tycoon",
+      "authors": "F. Scott Fitzgerald",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=3EDbEHca_k8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "description": "Depicts the inner-workings of the Hollywood movie industry and its impact on the fabric of American life.",
+      "published_year": 1994.0
+    }
+  },
+  {
+    "pk": 19,
+    "model": "book.book",
+    "fields": {
+      "title": "Tyranny of the Majority",
+      "authors": "Lani Guinier",
+      "categories": "History",
+      "thumbnail": "http://books.google.com/books/content?id=aRF7XdcCLq0C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "At last...the public hearing she was denied...These essays reveal keen powers of analysis applied to some of the most obdurate problems that bedevil electoral politics. Anyone who cares about the mechanisms of democracy should be engaged by her tough-minded explorations. It doesn't matter where you think you stand: it's all here, to argue or agree with. -- Henry Louis Gates, Jr. Lani Guinier's fascinating book is a prophetic intervention into a public conversation we desperately need to rejuvenate. There is no doubt that her powerful voice will produce good consequences for our nation and world. -- Cornel West, Author of Race Matters Intriguing and desperately needed... -- The San Francisco Chronicle",
+      "published_year": 1995.0
+    }
+  },
+  {
+    "pk": 20,
+    "model": "book.book",
+    "fields": {
+      "title": "Presidential Power and the Modern Presidents",
+      "authors": "Richard E. Neustadt",
+      "categories": "History",
+      "thumbnail": "http://books.google.com/books/content?id=elGozulX_o8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "description": "Suggests a theory of presidential power, and tests it against the events in the administrations of the postwar presidents",
+      "published_year": 1991.0
+    }
+  },
+  {
+    "pk": 21,
+    "model": "book.book",
+    "fields": {
+      "title": "Where the Red Fern Grows",
+      "authors": "Wilson Rawls",
+      "categories": "Juvenile Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=IHpRwgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "A young boy living in the Ozarks achieves his heart's desire when he becomes the owner of two redbone hounds and teaches them to be champion hunters.",
+      "published_year": 2000.0
+    }
+  },
+  {
+    "pk": 22,
+    "model": "book.book",
+    "fields": {
+      "title": "How to Read Literature Like a Professor",
+      "authors": "Thomas C. Foster",
+      "categories": "Literary Criticism",
+      "thumbnail": "http://books.google.com/books/content?id=irkUlwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "What does it mean when a fictional hero takes a journey?. Shares a meal? Gets drenched in a sudden rain shower? Often, there is much more going on in a novel or poem than is readily visible on the surface—a symbol, maybe, that remains elusive, or an unexpected twist on a character—and there's that sneaking suspicion that the deeper meaning of a literary text keeps escaping you. In this practical and amusing guide to literature, Thomas C. Foster shows how easy and gratifying it is to unlock those hidden truths, and to discover a world where a road leads to a quest; a shared meal may signify a communion; and rain, whether cleansing or destructive, is never just rain. Ranging from major themes to literary models, narrative devices, and form, How to Read Literature Like a Professor is the perfect companion for making your reading experience more enriching, satisfying, and fun.",
+      "published_year": 2003.0
+    }
+  },
+  {
+    "pk": 23,
+    "model": "book.book",
+    "fields": {
+      "title": "Going Postal",
+      "authors": "Terry Pratchett",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=5xRh5kkS84UC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Arch-swindler Moist Van Lipwig never believed his confidence crimes were hanging offenses -- until he found himself with a noose tightly around his neck, dropping through a trapdoor, and falling into ... a government job? By all rights, Moist should have met his maker. Instead, it's Lord Vetinari, supreme ruler of Ankh-Morpork, who promptly offers him a job as Postmaster. Since his only other option is a nonliving one, Moist accepts the position -- and the hulking golem watchdog who comes along with it, just in case Moist was considering abandoning his responsibilities prematurely. Getting the moribund Postal Service up and running again, however, may be a near-impossible task, what with literally mountains of decades-old undelivered mail clogging every nook and cranny of the broken-down post office building; and with only a few creaky old postmen and one rather unstable, pin-obsessed youth available to deliver it. Worse still, Moist could swear the mail is talking to him. Worst of all, it means taking on the gargantuan, money-hungry Grand Trunk clacks communication monopoly and its bloodthirsty piratical head, Mr. Reacher Gilt. But it says on the building neither rain nor snow nor glo m of ni t ... Inspiring words (admittedly, some of the bronze letters have been stolen), and for once in his wretched life Moist is going to fight. And if the bold and impossible are what's called for, he'll do it -- in order to move the mail, continue breathing, get the girl, and specially deliver that invaluable commodity that every human being (not to mention troll, dwarf, and, yes, even golem) requires: hope.",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 24,
+    "model": "book.book",
+    "fields": {
+      "title": "Modern Mind",
+      "authors": "Peter Watson",
+      "categories": "Science",
+      "thumbnail": "http://books.google.com/books/content?id=JVdMSavwwHoC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "From Freud to Babbitt, from Animal Farm to Sartre to the Great Society, from the Theory of Relativity to counterculture to Kosovo, The Modern Mind is encyclopedic, covering the major writers, artists, scientists, and philosophers who produced the ideas by which we live. Peter Watson has produced a fluent and engaging narrative of the intellectual tradition of the twentieth century, and the men and women who created it.",
+      "published_year": 2002.0
+    }
+  },
+  {
+    "pk": 25,
+    "model": "book.book",
+    "fields": {
+      "title": "A Year in the Life of William Shakespeare",
+      "authors": "James Shapiro",
+      "categories": "Biography & Autobiography",
+      "thumbnail": "http://books.google.com/books/content?id=86bOlwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "1599 was an epochal year for Shakespeare and England Shakespeare wrote four of his most famous plays: Henry the Fifth, Julius Caesar, As You Like It, and, most remarkably, Hamlet; Elizabethans sent off an army to crush an Irish rebellion, weathered an Armada threat from Spain, gambled on a fledgling East India Company, and waited to see who would succeed their aging and childless queen. James Shapiro illuminates both Shakespeare’s staggering achievement and what Elizabethans experienced in the course of 1599, bringing together the news and the intrigue of the times with a wonderful evocation of how Shakespeare worked as an actor, businessman, and playwright. The result is an exceptionally immediate and gripping account of an inspiring moment in history.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 26,
+    "model": "book.book",
+    "fields": {
+      "title": "The Bromeliad Trilogy",
+      "authors": "Terry Pratchett",
+      "categories": "Juvenile Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=IsFpvCusQsIC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "In a world whose seasons are defined by Christmas sales and Spring Fashions, hundreds of tiny nomes live in the corners and crannies of a human-run department store. They have made their homes beneath the floorboards for generations and no longer remember -- or even believe in -- life beyond the Store walls. Until the day a small band of nomes arrives at the Store from the Outside. Led by a young nome named Masklin, the Outsiders carry a mysterious black box (called the Thing), and they deliver devastating news: In twenty-one days, the Store will be destroyed. Now all the nomes must learn to work together, and they must learn to think -- and to think BIG. Part satire, part parable, and part adventure story par excellence, master storyteller Terry Pratchett’s engaging trilogy traces the nomes’ flight and search for safety, a search that leads them to discover their own astonishing origins and takes them beyond their wildest dreams.",
+      "published_year": 2003.0
+    }
+  },
+  {
+    "pk": 27,
+    "model": "book.book",
+    "fields": {
+      "title": "Identity",
+      "authors": "Milan Kundera",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=D30ExgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Milan Kundera's Identity translated from the French by Linda Asher. There are situations in which we fail for a moment to recognize the person we are with, in which the identity of the other is erased while we simultaneously doubt our own. That also happens with couples -- indeed, above all with couples, because lovers fear more than anything else \"losing sight\" of the loved one. With stunning artfulness in expanding and playing variations on the meaningful moment, Milan Kundera has made this situation -- and the vague sense of panic it inspires -- the very fabric of his new novel. Here brevity goes hand in hand with intensity, and a moment of bewilderment marks the start of a labyrinthine journey during which the reader repeatedly crosses the border between the real and the unreal, between what occurs in the world outside and what the mind creates in its solitude. Of all contemporary writers, only Kundera can transform such a hidden and disconcerting perception into the material for a novel, one of his finest, most painful, and most enlightening. Which, surprisingly, turns out to be a love story.",
+      "published_year": 1998.0
+    }
+  },
+  {
+    "pk": 28,
+    "model": "book.book",
+    "fields": {
+      "title": "The thief of always",
+      "authors": "Clive Barker",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=jKsrAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "After a mysterious stranger promises to end his boredom with a trip to the magical Holiday House, ten-year-old Harvey learns that his fun has a high price",
+      "published_year": 1992.0
+    }
+  },
+  {
+    "pk": 29,
+    "model": "book.book",
+    "fields": {
+      "title": "The Illustrated Alchemist",
+      "authors": "Paulo Coelho;Alan R. Clarke;Moebius",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=1YX2usKBAMIC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "This fable aims teaches the reader to open their mind, listen to their heart and most importantly, follow their dreams.",
+      "published_year": 1998.0
+    }
+  },
+  {
+    "pk": 30,
+    "model": "book.book",
+    "fields": {
+      "title": "Mars and Venus Book of Days",
+      "authors": "John Gray",
+      "categories": "Family & Relationships",
+      "thumbnail": "http://books.google.com/books/content?id=kd6YGT74stsC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Provides daily reminders of the differences in behavior and communication styles of men and women",
+      "published_year": 1998.0
+    }
+  },
+  {
+    "pk": 31,
+    "model": "book.book",
+    "fields": {
+      "title": "The Secret Garden Cookbook",
+      "authors": "Amy Cotler",
+      "categories": "Juvenile Nonfiction",
+      "thumbnail": "http://books.google.com/books/content?id=c7E_HQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Frances Hodgson Burnett's The Secret Garden delights in the wondrous discoveries of lonely Mary Lennox as she slowly helps bring an abandoned garden back to life. It also delights in good food and a robust appetite, and the health and strength they can bring. Written at a time when many children were going hungry and even starving, Burnett's beloved story celebrates the magic of fresh air, new milk, homemade currant buns, and hearty, simple fare. Inside the pages of this cookbook are recipes for Mary's favorite foods, in and out of the garden, from porridge to roasted potatoes and eggs, all inspired by The Secret Garden and all adapted by chef and culinary historian Amy Coder from traditional Victorian recipes. Ms. Coder has supplemented these simple, wholesome recipes with fascinating tidbits on Victorian foods and Victorian eating customs. The result is a scrumptious tribute to Burnett's classic novel, a fascinating glimpse into the cooking customs of a historical period that is now long past, and a step-by-step guide to making delicious, tasty treats to enjoy in your own secret garden.",
+      "published_year": 1999.0
+    }
+  },
+  {
+    "pk": 32,
+    "model": "book.book",
+    "fields": {
+      "title": "Laura's Album",
+      "authors": "William Anderson",
+      "categories": "Juvenile Nonfiction",
+      "thumbnail": "http://books.google.com/books/content?id=_zTkqDlEV-UC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Though best known as the author of the Little House books, Laura Ingalls Wilder led a full, rich life that spanned almost a century of American history. All through her life Laura saved mementos of her past, including early writings, letters, drawings, and photographs, which have been lovingly preserved in private and public collections across the country. Now, for the first time ever, these photographs, writings, and memorabilia have been gathered together in one incredible volume by noted Little House historian William Anderson. Each gorgeous page of LAURA'S ALBUM is a doorway into the private world of Laura Ingalls Wilder, and offers a unique glimpse of what her life was like. Here is the fascinating true story of this remarkable pioneer woman's life as well as an unforgettable tale of our own American past.",
+      "published_year": 1998.0
+    }
+  },
+  {
+    "pk": 33,
+    "model": "book.book",
+    "fields": {
+      "title": "Small Wonder",
+      "authors": "Barbara Kingsolver",
+      "categories": "Literary Collections",
+      "thumbnail": "http://books.google.com/books/content?id=2mrrlgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "In her new essay collection, the beloved author of High Tide in Tucson brings to us, out of one of history's darker moments, an extended love song to the world we still have. Whether she is contemplating the Grand Canyon, her vegetable garden, motherhood, genetic engineering, or the future of a nation founded on the best of all human impulses, these essays are grounded in the author's belief that our largest problems have grown from the earth's remotest corners as well as our own backyards, and that answers may lie in both those places. Sometimes grave, occasionally hilarious, and ultimately persuasive, Small Wonder is a hopeful examination of the people we seem to be, and what we might yet make of ourselves.",
+      "published_year": 2003.0
+    }
+  },
+  {
+    "pk": 34,
+    "model": "book.book",
+    "fields": {
+      "title": "Worlds Enough & Time",
+      "authors": "Dan Simmons",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=EKoIG4auiB4C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "An extraordinary artist with few rivals in his chosen arena, Dan Simmons possesses a restless talent that continually presses boundaries while tantalizing the mind and touching the soul. Now he offers us a superb quintet of novellas -- five dazzling masterworks of speculative fiction, including \"Orphans of the Helix,\" his award-winning return to the Hyperion Universe -- that demonstrates the unique mastery, breathtaking invention, and flawless craftsmanship of one of contemporary fiction's true greats. Human colonists seeking something other than godhood encounter their long-lost \"cousins\"...and an ancient scourge. A devastated man in suicide's embrace is caught up in a bizarre cat-and-mouse game with a young woman possessing a world-ending power. The distant descendants of a once-oppressed people learn a chilling lesson about the persistence of the past. A terrifying ascent up the frigid, snow-swept slopes of K2 shatters preconceptions and reveals the true natures of four climbers, one of whom is not human. At the intersection of a grand past and a threadbare present, an aging American in Russia confronts his own mortality as he glimpses a wondrous future.",
+      "published_year": 2002.0
+    }
+  },
+  {
+    "pk": 35,
+    "model": "book.book",
+    "fields": {
+      "title": "The Cheese Monkeys",
+      "authors": "Chip Kidd",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=wkCm2zyHAcwC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "After 15 years of designing more than 1,500 book jackets at Knopf for such authors as Anne Rice and Michael Chrichton, Kidd has crafted an affecting an entertaining novel set at a state university in the late 1950s that is both slap-happily funny and heartbreakingly sad. The Cheese Monkeys is a college novel that takes place over a tightly written two semesters. The book is set in the late 1950s at State U, where the young narrator, has decided to major in art, much to his parents’ dismay. It is an autobiographical, coming-of-age novel which tells universally appealing stories of maturity, finding a calling in life, and being inspired by a loving, demanding, and highly eccentric teacher.",
+      "published_year": 2002.0
+    }
+  },
+  {
+    "pk": 36,
+    "model": "book.book",
+    "fields": {
+      "title": "Caesar",
+      "authors": "Colleen McCullough",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=aoH_-e_syp0C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "A fictional portrait of Julius Caesar follows the legendary ancient Roman military and political leader from his remarkable conquest of Gaul, to his momentous decision at the Rubicon River, to his personal triumphs, tragedies, dreams, and disappointments. Reprint.",
+      "published_year": 2003.0
+    }
+  },
+  {
+    "pk": 37,
+    "model": "book.book",
+    "fields": {
+      "title": "Fragile Things",
+      "authors": "Neil Gaiman",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=ggLzJskmIqYC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "A mysterious circus terrifies an audience for one extraordinary performance before disappearing into the night, taking one of the spectators along with it . . . In a novella set two years after the events of American Gods, Shadow pays a visit to an ancient Scottish mansion, and finds himself trapped in a game of murder and monsters . . . In a Hugo Award-winning short story set in a strangely altered Victorian England, the great detective Sherlock Holmes must solve a most unsettling royal murder . . . Two teenage boys crash a party and meet the girls of their dreams—and nightmares . . . In a Locus Award-winning tale, the members of an excusive epicurean club lament that they've eaten everything that can be eaten, with the exception of a legendary, rare, and exceedingly dangerous Egyptian bird . . . Such marvelous creations and more—including a short story set in the world of The Matrix, and others set in the worlds of gothic fiction and children's fiction—can be found in this extraordinary collection, which showcases Gaiman's storytelling brilliance as well as his terrifyingly entertaining dark sense of humor. By turns delightful, disturbing, and diverting, Fragile Things is a gift of literary enchantment from one of the most unique writers of our time.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 38,
+    "model": "book.book",
+    "fields": {
+      "title": "What Went Wrong?",
+      "authors": "Bernard Lewis",
+      "categories": "History",
+      "thumbnail": "http://books.google.com/books/content?id=qgNrVchhhfMC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "For centuries, the world of Islam was in the forefront of human achievement -- the foremost military and economic power in the world, the leader in the arts and sciences of civilization. Christian Europe was seen as an outer darkness of barbarism and unbelief from which there was nothing to learn or to fear. And then everything changed. The West won victory after victory, first on the battlefield and then in the marketplace. In this elegantly written volume, Bernard Lewis, a renowned authority an Islamic affairs, examines the anguished reaction of the Islamic world as it tried to make sense of how it had been overtaken, overshadowed, and dominated by the West. In a fascinating portrait of a culture in turmoil, Lewis shows how the Middle East turned its attention to understanding European weaponry, industry, government, education, and culture. He also describes how some Middle Easterners fastened blame on a series of scapegoats, while others asked not \"Who did this to us?\" but rather \"Where did we go wrong?\" With a new Afterword that addresses September 11 and its aftermath, What Went Wrong? is an urgent, accessible book that no one who is concerned with contemporary affairs will want to miss.",
+      "published_year": 2003.0
+    }
+  },
+  {
+    "pk": 39,
+    "model": "book.book",
+    "fields": {
+      "title": "Letters from the Earth",
+      "authors": "Mark Twain",
+      "categories": "Literary Criticism",
+      "thumbnail": "http://books.google.com/books/content?id=uURT_Dwfby0C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "I have told you nothing about man that is not true.\" You must pardon me if I repeat that remark now and then in these letters; I want you to take seriously the things I am telling you, and I feel that if I were in your place and you in mine, I should need that reminder from time to time, to keep my credulity from flagging. In Letters from the Earth, Twain presents himself as the Father of History -- reviewing and interpreting events from the Garden of Eden through the Fall and the Flood, translating the papers of Adam and his descendants through the generations. First published fifty years after his death, this eclectic collection is vintage Twain: sharp, witty, imaginative, complex, and wildly funny",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 40,
+    "model": "book.book",
+    "fields": {
+      "title": "Savannah Blues",
+      "authors": "Mary Kay Andrews",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=q6lDgw6lr-MC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Landing a catch like Talmadge Evans III got Eloise \"Weezie\" Foley a jewel of a town house in Savannah's historic district. Divorcing Tal got her exiled to the backyard carriage house, where she has launched a spite-fest with Tal's new fiancÉe, the elegant Caroline DeSantos. An antiques picker, Weezie combs Savannah's steamy back alleys and garage sales for treasures when she's not dealing with her loopy relatives or her hunky ex-boyfriend. But an unauthorized sneak preview at a sale lands Weezie smack in the middle of magnolia-scented murder, mayhem...and more. Dirty deals simmer all around her—just as her relationship with the cutest chef in town heats up and she finds out how delicious love can be the second time around.",
+      "published_year": 2003.0
+    }
+  },
+  {
+    "pk": 41,
+    "model": "book.book",
+    "fields": {
+      "title": "The Innovator's Dilemma",
+      "authors": "Clayton M. Christensen",
+      "categories": "Business & Economics",
+      "thumbnail": "http://books.google.com/books/content?id=qZxlDIzXyqwC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "In this revolutionary bestseller, Harvard professor Clayton M. Christensen says outstanding companies can do everything right and still lose their market leadership -- or worse, disappear completely. And he not only proves what he says, he tells others how to avoid a similar fate. Focusing on \"disruptive technology\" -- the Honda Super Cub, Intel's 8088 processor, or the hydraulic excavator, for example -- Christensen shows why most companies miss \"the next great wave.\" Whether in electronics or retailing, a successful company with established products will get pushed aside unless managers know when to abandon traditional business practices. Using the lessons of successes and failures from leading companies, The Innovator's Dilemma presents a set of rules for capitalizing on the phenomenon of disruptive innovation. Find out: When it is right not to listen to customers. When to invest in developing lower-performance products that promise lower margins. When to pursue small markets at the expense of seemingly larger and more lucrative ones. Sharp, cogent, and provocative, The Innovator's Dilemma is one of the most talked-about books of our time -- and one no savvy manager or entrepreneur should be without.",
+      "published_year": 2003.0
+    }
+  },
+  {
+    "pk": 42,
+    "model": "book.book",
+    "fields": {
+      "title": "Happiness",
+      "authors": "Will Ferguson",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=4B2EYGj68uQC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Why would there be a contract out on Edwin de Valu's life? Edwin -- the wiry low-level editor at Panderic Press. Why has rage disappeared from the roads and McDonald's gone alfalfa? How come everyone seems so damn happy? And most importantly, who, or what, is Tupak Soiree? When an enormous self-help manuscript lands on Edwin's desk, it's headed for the trash. Edwin's cynicism of self-help books, coupled with his filthy mood that morning, results in him dismissing Tupak Soiree's What I Learned on the Mountain and using it as a doorstop. However, Tupak's manuscript is unique -- a self-help book that actually works. Before Edwin knows it, a chain of events begins that affects not only his own life but the world at large. For those who choke on Chicken Soup for the Soul or have choice words for Dr. Phil, Will Ferguson offers up a killer dose of Happiness™ -- a masterpiece of comic fiction.",
+      "published_year": 2003.0
+    }
+  },
+  {
+    "pk": 43,
+    "model": "book.book",
+    "fields": {
+      "title": "Warrior of the Light",
+      "authors": "Paulo Coelho",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=yH0zlwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Warrior of the Light: A Manual is an inspirational companion to The Alchemist, an international bestseller that has beguiled millions of readers around the world. Every short passage invites us to live out our dreams, to embrace the uncertainty of life, and to rise to our own unique destiny. In his inimitable style, Paulo Coelho helps bring out the Warrior of the Light within each of us. He also shows readers how to embark upon the way of the Warrior: the one who appreciates the miracle of being alive, the one who accepts failure, and the one whose quest leads him to become the person he wants to be. Paulo Coelho is one of the most beloved storytellers of our time. Now, in the long-awaited companion to his first novel, Coelho presents a collection of philosophical stories that will delight and guide seekers everywhere.",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 44,
+    "model": "book.book",
+    "fields": {
+      "title": "The Devil and Miss Prym",
+      "authors": "Paulo Coelho",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=TpR7JDmg9DoC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "A community devoured by greed, cowardice, and fear. A man persecuted by the ghosts of his painful past. A young woman searching for happiness. In one eventful week, each will face questions of life, death, and power, and each will choose a path. Will they choose good or evil? In the remote village of Viscos -- a village too small to be on any map, a place where time seems to stand still -- a stranger arrives, carrying with him a backpack containing a notebook and eleven gold bars. He comes searching for the answer to a question that torments him: Are human beings, in essence, good or evil? In welcoming the mysterious foreigner, the whole village becomes an accomplice to his sophisticated plot, which will forever mark their lives. Paulo Coelho's stunning novel explores the timeless struggle between good and evil, and brings to our everyday dilemmas fresh perspective: incentive to master the fear that prevents us from following our dreams, from being different, from truly living. The Devil and Miss Prym is a story charged with emotion, in which the integrity of being human meets a terrifying test.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 45,
+    "model": "book.book",
+    "fields": {
+      "title": "The Big Bing",
+      "authors": "Stanley Bing",
+      "categories": "Business & Economics",
+      "thumbnail": "http://books.google.com/books/content?id=Cb3MlgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "A corporate mole's-eye view of the society in which we all live and toil, creating one of the most entertaining, thought provoking, and just plain funny bodies of work in contemporary letters. Stanley Bing knows whereof he speaks. He has lived the last two decades working inside a gigantic multinational corporation, kicking and screaming all the way up the ladder. He has seen it all -- mergers, acquisitions, layoffs, the death of the three-martini lunch -- and has himself been painfully re-engineered a number of times. He has eaten and drunk way too much, stayed in hotels far too good for him, waited for limousines in the pouring rain, and enjoyed it all. Sort of. Most importantly, Bing has seen management at its best and worst, and has practiced both as he made the transition from an inexperienced player who hated pompous senior management to a polished strategist who kind of sees its point of view now and then. In one essential volume, here is all you need to know to master your career, your life, and when necessary, other weaker life forms.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 46,
+    "model": "book.book",
+    "fields": {
+      "title": "Walt Whitman",
+      "authors": "Justin Kaplan",
+      "categories": "Biography & Autobiography",
+      "thumbnail": "http://books.google.com/books/content?id=BMLXGLY9OzoC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Whitman's genius, passions, poetry, and androgynous sensibility entwined to create an exuberant life amid the turbulent American mid-nineteenth century. In vivid detail, Kaplan examines the mysterious selves of the enigmatic man who celebrated the freedom and dignity of the individual and sang the praises of democracy and the brotherhood of man.",
+      "published_year": 2003.0
+    }
+  },
+  {
+    "pk": 47,
+    "model": "book.book",
+    "fields": {
+      "title": "How to Make Love Like a Porn Star",
+      "authors": "Jenna Jameson;Neil Strauss",
+      "categories": "Biography & Autobiography",
+      "thumbnail": "http://books.google.com/books/content?id=qjZzQgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "When the stewardess brought me off the plane in a wheelchair, I lowered my head. I was too scared to even look at my father. I didn't want to see the disappointment and horror on his face. All that hate I had accumulated for him over the years, all the resentment against him for not understanding what I was going through, just released with the tears. \"So, where are your parents?\" the stewardess asked me after a few minutes. \"I can't wait here with you much longer.\" I looked up and wiped my eyes. My father was standing ten feet away. He didn't even recognize me. In the underbelly of Las Vegas, a cesspool of warring biker gangs and seedy strip clubs transformed the gawky, brace-faced Jenna Massoli into the bombshell Jenna Jameson. Today, Jenna Jameson is the biggest star in the history of adult movies, consistently ranked as one of the most beautiful women alive. But behind the glamour and the meteoric rise to fame was a path paved with tragedy and heartbreak. As a teenager drawn into a chaotic world ruled by rape, abuse, and murder, Jenna plunged into a downward spiral of addiction, even as she became one of the most photographed women in adult magazines. Determined to overcome this past, Jenna rebounded in the adult-film business, where she encountered sadistic directors, experienced lovers of both sexes, amorous celebrities (from Howard Stern to Marilyn Manson to Tommy Lee), bitter rival starlets, and finally, glory, as she went on to become the biggest porn star the world has ever seen. But her struggle for happiness did not end when the accolades began. For years she wrestled with her resentment at her estranged father, the loneliness of growing up from the age of two without a mother, and her enduring childhood desire to find a man who could give her the security and love she never had. Her unforgettable memoir is many things at once: a shocking sexual history, an insider's guide to the secret workings of the billion-dollar adult-film industry, and a gripping thriller that probes deep into Jenna's dark past. An unparalleled exploration of sexual freedom, How to Make Love Like a Porn Star ventures far beyond the flesh, into the heart-shredding tragedies and adrenaline-pumping triumphs of a woman who has already lived a hundred lifetimes. Always witty and humorous even as she faces the demons of her past, Jenna offers hilarious anecdotes about one of the most controversial businesses in history, and shares outrageous advice, including her ten commandments of dating and sex, how to become a \"suitcase pimp,\" and how to make it in the business as a female (or a male). Add to this never-before-seen photographs from Jenna's private collection and others taken exclusively for this book, and the result is certain to be one of the most talked-about books of the year.",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 48,
+    "model": "book.book",
+    "fields": {
+      "title": 1421,
+      "authors": "Gavin Menzies",
+      "categories": "History",
+      "thumbnail": "http://books.google.com/books/content?id=lD7S4QLUjBkC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Based on 15 years of in-depth research, \"1421\" traces the voyages of an extraordinary fleet of Chinese ships, whose crews actually charted America 70 years before Columbus. Four 8-page color inserts. 37 maps & diagrams.",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 49,
+    "model": "book.book",
+    "fields": {
+      "title": "The Girls of Lighthouse Lane #3",
+      "authors": "Thomas Kinkade;Erika Tamar",
+      "categories": "Juvenile Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=2LXIPoESG9kC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "During a scarlet fever outbreak in 1906, thirteen-year-old Lizabeth must decide whether it is more important to be Strawberry Queen or to be at the bedside of her younger sister, who is ill.",
+      "published_year": 2005.0
+    }
+  },
+  {
+    "pk": 50,
+    "model": "book.book",
+    "fields": {
+      "title": "The Bradbury Chronicles",
+      "authors": "Sam Weller",
+      "categories": "Biography & Autobiography",
+      "thumbnail": "http://books.google.com/books/content?id=EiWCIK4vGSMC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Accomplished journalist Sam Weller met the Ray Bradbury while writing a cover story for the Chicago Tribune Magazine and spent hundreds of hours interviewing Bradbury, his editors, family members, and longtime friends. With unprecedented access to private archives, he uncovered never–before–published letters, documents, and photographs that help tell the story of this literary genius and his remarkable creative journey. The result is a richly textured, detailed biography that illuminates the origins and accomplishments of Bradbury's fascinating mind.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 51,
+    "model": "book.book",
+    "fields": {
+      "title": "The Wicked Day",
+      "authors": "Mary Stewart",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=znM3Eb8MZiMC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Born of an incestuous relationship between King Arthur and his half sister, the evil sorceress Morgause, the bastard Mordred is reared in secrecy. Called to Camelot by events he cannot deny, Mordred becomes Arthur’s most trusted counselor -- a fateful act that leads to the \"wicked day of destiny\" when father and son must face each other in battle.",
+      "published_year": 2003.0
+    }
+  },
+  {
+    "pk": 52,
+    "model": "book.book",
+    "fields": {
+      "title": "The Game",
+      "authors": "Neil Strauss",
+      "categories": "Biography & Autobiography",
+      "thumbnail": "http://books.google.com/books/content?id=ibpvw3wALXcC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Hidden somewhere, in nearly every major city in the world, is an underground seduction lair. And in these lairs, men trade the most devastatingly effective techniques ever invented to charm women. This is not fiction. These men really exist. They live together in houses known as Projects. And Neil Strauss, the bestselling author, spent two years living among them, using the pseudonym Style to protect his real-life identity. The result is one of the most explosive and controversial books of the year -- guaranteed to change the lives of men and transform the way women understand the opposite sex forever. On his journey from AFC (average frustrated chump) to PUA (pick-up artist) to PUG (pick-up guru), Strauss not only shares scores of original seduction techniques but also has unforgettable encounters with the likes of Tom Cruise, Britney Spears, Paris Hilton, Heidi Fleiss, and Courtney Love. And then things really start to get strange -- and passions lead to betrayals lead to violence. The Game is the story of one man's transformation from frog to prince -- to prisoner in the most unforgettable book of the year.",
+      "published_year": 2005.0
+    }
+  },
+  {
+    "pk": 53,
+    "model": "book.book",
+    "fields": {
+      "title": "Gold",
+      "authors": "Isaac Asimov",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=td_ulwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Gold is the final and crowning achievement of the fifty-year career of science fiction's transcendent genius, the world-famous author who defined the field of science fiction for its practitioners, its millions of readers, and the world at large. The first section contains stories that range from the humorous to the profound, at the heart of which is the title story, \"Gold,\" a moving and revealing drama about a writer who gambles everything on a chance at immortality: a gamble Asimov himself made -- and won. The second section contains the grand master's ruminations on the SF genre itself. And the final section is comprised of Asimov's thoughts on the craft and writing of science fiction.",
+      "published_year": 2003.0
+    }
+  },
+  {
+    "pk": 54,
+    "model": "book.book",
+    "fields": {
+      "title": "Built to Last",
+      "authors": "Jim Collins;Jerry I. Porras",
+      "categories": "Business & Economics",
+      "thumbnail": "http://books.google.com/books/content?id=lRNtHbvDgRgC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "This is not a book about charismatic visionary leaders. It is not about visionary product concepts or visionary products or visionary market insights. Nor is it about just having a corporate vision. This is a book about something far more important, enduring, and substantial. This is a book about visionary companies.\" So write Jim Collins and Jerry Porras in this groundbreaking book that shatters myths, provides new insights, and gives practical guidance to those who would like to build landmark companies that stand the test of time. Drawing upon a six-year research project at the Stanford University Graduate School of Business, Collins and Porras took eighteen truly exceptional and long-lasting companies -- they have an average age of nearly one hundred years and have outperformed the general stock market by a factor of fifteen since 1926 -- and studied each company in direct comparison to one of its top competitors. They examined the companies from their very beginnings to the present day -- as start-ups, as midsize companies, and as large corporations. Throughout, the authors asked: \"What makes the truly exceptional companies different from other companies?\" What separates General Electric, 3M, Merck, Wal-Mart, Hewlett-Packard, Walt Disney, and Philip Morris from their rivals? How, for example, did Procter & Gamble, which began life substantially behind rival Colgate, eventually prevail as the premier institution in its industry? How was Motorola able to move from a humble battery repair business into integrated circuits and cellular communications, while Zenith never became dominant in anything other than TVs? How did Boeing unseat McDonnell Douglas as the world's best commercial aircraft company -- what did Boeing have that McDonnell Douglas lacked? By answering such questions, Collins and Porras go beyond the incessant barrage of management buzzwords and fads of the day to discover timeless qualities that have consistently distinguished out-standing companies. They also provide inspiration to all executives and entrepreneurs by destroying the false but widely accepted idea that only charismatic visionary leaders can build visionary companies. Filled with hundreds of specific examples and organized into a coherent framework of practical concepts that can be applied by managers and entrepreneurs at all levels, Built to Last provides a master blueprint for building organizations that will prosper long into the twenty-first century and beyond",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 55,
+    "model": "book.book",
+    "fields": {
+      "title": "Fluke",
+      "authors": "Christopher Moore",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=pIHvlgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Just why do humpback whales sing? That's the question that has marine behavioral biologist Nate Quinn and his crew poking, charting, recording, and photographing very big, wet, gray marine mammals. Until the extraordinary day when a whale lifts its tail into the air to display a cryptic message spelled out in foot-high letters: Bite me. Trouble is, Nate's beginning to wonder if he hasn't spent just a little too much time in the sun. 'Cause no one else on his team saw a thing -- not his longtime partner, Clay Demodocus; not their saucy young research assistant; not even the spliff-puffing white-boy Rastaman Kona (né Preston Applebaum). But later, when a roll of film returns from the lab missing the crucial tail shot -- and his research facility is trashed -- Nate realizes something very fishy indeed is going on. By turns witty, irreverent, fascinating, puzzling, and surprising, Fluke is Christopher Moore at his outrageous best.",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 56,
+    "model": "book.book",
+    "fields": {
+      "title": "A Crack in the Edge of the World",
+      "authors": "Simon Winchester",
+      "categories": "History",
+      "thumbnail": "http://books.google.com/books/content?id=St5QRRhkp1YC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Unleashed by ancient geologic forces, a magnitude 8.25 earthquake rocked San Francisco in the early hours of April 18, 1906. Less than a minute later, the city lay in ruins. Bestselling author Simon Winchester brings his inimitable storytelling abilities to this extraordinary event, exploring the legendary earthquake and fires that spread horror across San Francisco and northern California in 1906 as well as its startling impact on American history and, just as important, what science has recently revealed about the fascinating subterranean processes that produced it—and almost certainly will cause it to strike again.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 57,
+    "model": "book.book",
+    "fields": {
+      "title": "Men Are from Mars, Women Are from Venus",
+      "authors": "John Gray",
+      "categories": "Family & Relationships",
+      "thumbnail": "http://books.google.com/books/content?id=MUw_dAtcRjEC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Rediscover the most famous relationship book ever published Once upon a time Martians and Venusians met, fell in love, and had happy relationships together because they respected and accepted their differences. Then they came to Earth and amnesia set in: they forgot they were from different planets. Based on years of successful counseling of couples and individuals, Men Are from Mars, Women Are from Venus has helped millions of couples transform their relationships. Now viewed as a modern classic, this phenomenal book has helped men and women realize how different they can be in their communication styles, their emotional needs, and their modes of behavior—and offers the secrets of communicating without conflicts, allowing couples to give intimacy every chance to grow.",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 58,
+    "model": "book.book",
+    "fields": {
+      "title": "Slouching Toward Nirvana",
+      "authors": "Charles Bukowski",
+      "categories": "Poetry",
+      "thumbnail": "http://books.google.com/books/content?id=L_7nlwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "in this place there are the dead, the deadly and the dying. there is the cross, the builders of the cross and the burners of the cross. the pattern of my life forms like a cheap shadow on the wall before me. my love what is left of it now must crawl to wherever it can crawl. the strongest know that death is final and the happiest are those gifted with the shortest journey.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 59,
+    "model": "book.book",
+    "fields": {
+      "title": "Bad Childhood---Good Life",
+      "authors": "Laura Schlessinger",
+      "categories": "Self-Help",
+      "thumbnail": "http://books.google.com/books/content?id=2sepdlitBW8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "description": "Exploring how the past influences the present, the author discusses how to understand each individual's unique coping style and how to tap into the extraordinary quality of human spirit that will create the transition from victim to victor.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 60,
+    "model": "book.book",
+    "fields": {
+      "title": "Cat Cross Their Graves",
+      "authors": "Shirley Rousseau Murphy",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=L7LudFEjAdoC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "The beautiful, serene village of Molena Point, California is the type of place where people go to get away from the harsher realities of life––which is what attracted classic film star Patty Rose to buy the village inn, and settle down to enjoy her golden years. But as the town gathers to celebrate and honor the beautiful, aging actress with a festival of her old films, Patty is brutally murdered––to the horror and shock of this peaceful burg. A gentle tortoiseshell cat, Kit, has been enjoying a retreat to the animal–loving actress's inn, where she's spending time with her feline friends Dulcie, and the slick tomcat sleuth, Joe Grey. But her relaxation is cut short when she hears the gunshots that end Patty's life, and sees her dead body sprawled on the inn's front steps. She glimpses the killer racing into the parking garage, and soon follows his trail. Joe and Dulcie must now follow the naïve Kit's trail, and keep her from getting into serious trouble. To complicate matters, Joe discovers that Dulcie has been hiding a runaway child––one of the lucky humans that these special cats choose to talk to––who has now been kidnapped, likely by the same man who killed their famous friend. In the end, the little girl's abduction leads them to Patty's killer, and the feline friends are all united––but they all must mourn a departed friend as they stand beside the newly laid grave of Patty Rose.",
+      "published_year": 2005.0
+    }
+  },
+  {
+    "pk": 61,
+    "model": "book.book",
+    "fields": {
+      "title": "Cat Breaking Free",
+      "authors": "Shirley Rousseau Murphy",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=-yFbmAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "The fur starts flying when a gang from L.A. comes up to tranquil Molena Point, California, and begins breaking into the village's quaint shops. The fur of Joe Grey, Feline P.I., that is. After all, Molena Point has been his home since he was a kitten eating scraps from the garbage behind the local delicatessen, and he doesn't take well to marauding strangers. Joe even wonders whether the blonde who's moved into next to his human companion Clyde could be a part of the gang––she's been acting pretty suspicious lately. But when the strangers start trapping and caging feral cats––speaking cats like Joe and his girlfriend Dulcie––it proves too much for the intrepid four–footed detective. And when one of the gang is murdered, and a second mysterious death comes to light, he has no choice but to try to stop the crimes. Joe, Dulcie, and their tattercoat friend Kit, who used to be a stray herself, are deep into the investigation when they are able to release the three trapped cats. But as Kit leads them away to freedom, will she herself return to that wild life?",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 62,
+    "model": "book.book",
+    "fields": {
+      "title": "Slider",
+      "authors": "Patrick Robinson",
+      "categories": "Sports & Recreation",
+      "thumbnail": "http://books.google.com/books/content?id=MCK_lgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Each summer, on the fields of glorious Cape Marlin, off the New England coast, the nation's best college players gather to play the most important baseball of their lives. Jack Faber is a young hotshot pitcher with an unhittable slider and a rocket for a fastball. He plays for the fabled Seapuit Seawolves and dreams of making the Big Show. But a new coach, the scowling Bruno Riazzi, a former pro catcher, resents the kid's celebrity status and decides to knock him down a peg or two. And he stops at nothing to make it happen. Humiliated, Jack loses his lifelong art, and with it his passion for the game, as well as, mysteriously, his ability to throw. A devastated Jack Faber is released from the St. Charles College roster. But the Seawolves coaches won't give up on him. They bring Jack back to Cape Marlin, determined to help him rediscover his lost talent. He finds himself again under the summer sun, coaches and old friends standing by him. But in the end it will be up to Jack. Based on a true story, Slider celebrates the national pastime, a game that can break grown men's hearts -- as well as make them whole again.",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 63,
+    "model": "book.book",
+    "fields": {
+      "title": "The Black Dahlia Files",
+      "authors": "Don Wolfe",
+      "categories": "True Crime",
+      "thumbnail": "http://books.google.com/books/content?id=F6PpPrKuUaMC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "In 1946, Elizabeth Short traveled to Hollywood to become famous and see her name up in lights. Instead, the dark-haired beauty became immortalized in the headlines as the \"Black Dahlia\" when her nude and bisected body was discovered in the weeds of a vacant lot. Despite the efforts of more than four hundred police officers and homicide investigators, the heinous crime was never solved. Now, after endless speculation and false claims, bestselling author Donald H. Wolfe discovers startling new evidence—buried in the files of the Los Angeles District Attorney's Office for more than half a century. With the aid of archival photos, news clippings, and investigative reports, Wolfe documents the riveting untold story that names the brutal murderer—the notorious Mafia leader, Benjamin \"Bugsy\" Siegel—and the motive—an unwanted pregnancy resulting from Short's involvement with the most powerful figure in Los Angeles, Norman Chandler. But Wolfe goes even further to unravel the large-scale cover-up behind the case. Wolfe's extensive research, based on the evidence he discovered in the recently opened LADA files, makes The Black Dahlia Files the authoritative work on the murder that has drawn endless scrutiny but remained unsolved—until now.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 64,
+    "model": "book.book",
+    "fields": {
+      "title": "Eleven Minutes",
+      "authors": "Paulo Coelho",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=Qp0EZu3GCYsC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Eleven Minutes is the story of Maria, a young girl from a Brazilian village, whose first innocent brushes with love leave her heartbroken. At a tender age, she becomes convinced that she will never find true love, instead believing that \"love is a terrible thing that will make you suffer. . . .\" A chance meeting in Rio takes her to Geneva, where she dreams of finding fame and fortune. Maria's despairing view of love is put to the test when she meets a handsome young painter. In this odyssey of self-discovery, Maria has to choose between pursuing a path of darkness -- sexual pleasure for its own sake -- or risking everything to find her own \"inner light\" and the possibility of sacred sex, sex in the context of love. This P.S. edition features an extra 16 pages of insights into the book, including author interviews, recommended reading, and more.",
+      "published_year": 2005.0
+    }
+  },
+  {
+    "pk": 65,
+    "model": "book.book",
+    "fields": {
+      "title": "Zen and the Art of Motorcycle Maintenance",
+      "authors": "Robert M. Pirsig",
+      "categories": "Psychology",
+      "thumbnail": "http://books.google.com/books/content?id=KMRReyLPyXMC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "One of the most important and influential books written in the past half-century, Robert M. Pirsig's Zen and the Art of Motorcycle Maintenance is a powerful, moving, and penetrating examination of how we live . . . and a breathtaking meditation on how to live better. Here is the book that transformed a generation: an unforgettable narration of a summer motorcycle trip across America's Northwest, undertaken by a father and his young son. A story of love and fear -- of growth, discovery, and acceptance -- that becomes a profound personal and philosophical odyssey into life's fundamental questions, this uniquely exhilarating modern classic is both touching and transcendent, resonant with the myriad confusions of existence . . . and the small, essential triumphs that propel us forward.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 66,
+    "model": "book.book",
+    "fields": {
+      "title": "Ulysses S. Grant",
+      "authors": "Michael Korda",
+      "categories": "Biography & Autobiography",
+      "thumbnail": "http://books.google.com/books/content?id=rvaqxQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "One of the first two volumes in Harper's Eminent Lives series, Korda brings his acclaimed storytelling talents to the life of Ulysses S. Grant – a man who managed to end the Civil War on a note of grace, serve two terms as president, write one of the most successful military memoirs in American literature, and is today remembered as a brilliant general but a failed president. Ulysses S. Grant was the first officer since George Washington to become a four–star general in the United States Army, and the only president between Andrew Jackson and Woodrow Wilson to serve eight consecutive years in the White House. In this succinct and vivid biography, Michael Korda considers Grant's character and reconciles the conflicting evaluations of his leadership abilities. Grant's life played out as a true Horatio Alger story. Despite his humble background as the son of a tanner in Ohio, his lack of early success in the army, and assorted failed business ventures, his unwavering determination propelled him through the ranks of military leadership and into the presidency. But while the general's tenacity and steadfastness contributed to his success on the battlefield, it both aided and crippled his effectiveness in the White House. Assessing Grant both within the context of his time and in contrast to more recent American leaders, Korda casts a benevolent eye on Grant's presidency while at the same time conceding his weaknesses. He suggests that though the general's second term ended in financial and political scandals, the fact remains that for eight years Grant exerted a calming influence on a country that had only just emerged from a horrendous civil war. Ulysses S. Grant is an even–handed and stirring portrait of a man who guided America through a pivotal juncture in its history.",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 67,
+    "model": "book.book",
+    "fields": {
+      "title": "A Dirty Job",
+      "authors": "Christopher Moore",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=W8EPgwEP_hoC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Charlie Asher is a pretty normal guy. A little hapless, somewhat neurotic, sort of a hypochondriac. He's what's known as a Beta Male: the kind of fellow who makes his way through life by being careful and constant -- you know, the one who's always there to pick up the pieces when the girl gets dumped by the bigger/taller/stronger Alpha Male. But Charlie's been lucky. He owns a building in the heart of San Francisco, and runs a secondhand store with the help of a couple of loyal, if marginally insane, employees. He's married to a bright and pretty woman who actually loves him for his normalcy. And she, Rachel, is about to have their first child. Yes, Charlie's doing okay for a Beta. That is, until the day his daughter, Sophie, is born. Just as Charlie -- exhausted from the birth -- turns to go home, he sees a strange man in mint-green golf wear at Rachel's hospital bedside, a man who claims that no one should be able to see him. But see him Charlie does, and from here on out, things get really weird. . . . People start dropping dead around him, giant ravens perch on his building, and it seems that everywhere he goes, a dark presence whispers to him from under the streets. Strange names start appearing on his nightstand notepad, and before he knows it, those people end up dead, too. Yup, it seems that Charlie Asher has been recruited for a new job, an unpleasant but utterly necessary one: Death. It's a dirty job. But hey, somebody's gotta do it. Christopher Moore, the man whose Lamb served up Jesus' \"missing years\" (with the funny parts left in), and whose Fluke found the deep humor in whale researchers' lives, now shines his comic light on the undiscovered country we all eventually explore -- death and dying -- and the results are hilarious, heartwarming, and a hell of a lot of fun.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 68,
+    "model": "book.book",
+    "fields": {
+      "title": "Quicksilver",
+      "authors": "Neal Stephenson",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=Qf1AlwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Quicksilver is the story of Daniel Waterhouse, fearless thinker and conflicted Puritan, pursuing knowledge in the company of the greatest minds of Baroque-era Europe, in a chaotic world where reason wars with the bloody ambitions of the mighty, and where catastrophe, natural or otherwise, can alter the political landscape overnight. It is a chronicle of the breathtaking exploits of \"Half-Cocked Jack\" Shaftoe -- London street urchin turned swashbuckling adventurer and legendary King of the Vagabonds -- risking life and limb for fortune and love while slowly maddening from the pox. And it is the tale of Eliza, rescued by Jack from a Turkish harem to become spy, confidante, and pawn of royals in order to reinvent Europe through the newborn power of finance. A gloriously rich, entertaining, and endlessly inventive novel that brings a remarkable age and its momentous events to vivid life, Quicksilver is an extraordinary achievement from one of the most original and important literary talents of our time. And it's just the beginning ...",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 69,
+    "model": "book.book",
+    "fields": {
+      "title": "Every Book Its Reader",
+      "authors": "Nicholas A. Basbanes",
+      "categories": "Literary Criticism",
+      "thumbnail": "http://books.google.com/books/content?id=o4K_KMO1DWUC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Inspired by a landmark exhibition mounted by the British Museum in 1963 to celebrate five eventful centuries of the printed word, Nicholas A. Basbanes offers a lively consideration of writings that have \"made things happen\" in the world, works that have both nudged the course of history and fired the imagination of countless influential people. In his fifth work to examine a specific aspect of book culture, Basbanes also asks what we can know about such figures as John Milton, Edward Gibbon, John Locke, Isaac Newton, Samuel Taylor Coleridge, John Adams, Frederick Douglass, Abraham Lincoln, Henry James, Thomas Edison, Helen Keller––even the notorious Marquis de Sade and Adolf Hitler––by knowing what they have read. He shows how books that many of these people have consulted, in some cases annotated with their marginal notes, can offer tantalizing clues to the evolution of their character and the development of their thought.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 70,
+    "model": "book.book",
+    "fields": {
+      "title": "Lost Horizon",
+      "authors": "James Hilton",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=QD1s4c3EHgUC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Following a plane crash in the Himalayan mountains, a lost group of Englishmen and Americans stumble upon the dream-like, utopian world of Shangri-La, where life is eternal and civilization refined, in a new trade paperback edition of the classic 1933 novel. Reprint.",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 71,
+    "model": "book.book",
+    "fields": {
+      "title": "Thomas Jefferson",
+      "authors": "Christopher Hitchens",
+      "categories": "Biography & Autobiography",
+      "thumbnail": "http://books.google.com/books/content?id=zV8P_3E1OCIC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "In this unique biography of Thomas Jefferson, leading journalist and social critic Christopher Hitchens offers a startlingly new and provocative interpretation of our Founding Father. Situating Jefferson within the context of America's evolution and tracing his legacy over the past two hundred years, Hitchens brings the character of Jefferson to life as a man of his time and also as a symbolic figure beyond it. Conflicted by power, Jefferson wrote the Declaration of Independence and acted as Minister to France yet yearned for a quieter career in the Virginia legislature. Predicting that slavery would shape the future of America's development, this professed proponent of emancipation elided the issue in the Declaration and continued to own human property. An eloquent writer, he was an awkward public speaker; a reluctant candidate, he left an indelible presidential legacy. Jefferson's statesmanship enabled him to negotiate the Louisiana Purchase with France, doubling the size of the nation, and he authorized the Lewis and Clark expedition, opening up the American frontier for exploration and settlement. Hitchens also analyzes Jefferson's handling of the Barbary War, a lesser-known chapter of his political career, when his attempt to end the kidnapping and bribery of Americans by the Barbary states, and the subsequent war with Tripoli, led to the building of the U.S. navy and the fortification of America's reputation regarding national defense. In the background of this sophisticated analysis is a large historical drama: the fledgling nation's struggle for independence, formed in the crucible of the eighteenth-century Enlightenment, and, in its shadow, the deformation of that struggle in the excesses of the French Revolution. This artful portrait of a formative figure and a turbulent era poses a challenge to anyone interested in American history -- or in the ambiguities of human nature.",
+      "published_year": 2005.0
+    }
+  },
+  {
+    "pk": 72,
+    "model": "book.book",
+    "fields": {
+      "title": "Muhammad",
+      "authors": "Karen Armstrong",
+      "categories": "Biography & Autobiography",
+      "thumbnail": "http://books.google.com/books/content?id=JUz3Z0iv_pgC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Muhammad was born in 570 CE, and over the following sixty years built a thriving spiritual community, laying the foundations of a religion that changed the course of world history. There is more historical data on his life than on that of the founder of any other major faith, and yet his story is little known. Karen Armstrong's immaculately researched new biography of Muhammad will enable readers to understand the true origins and spirituality of a faith that is all too often misrepresented as cruel, intolerant, and inherently violent. An acclaimed authority on religious and spiritual issues, Armstrong offers a balanced, in-depth portrait, revealing the man at the heart of Islam by dismantling centuries of misconceptions. Armstrong demonstrates that Muhammad's life—a pivot point in history—has genuine relevance to the global crises we face today.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 73,
+    "model": "book.book",
+    "fields": {
+      "title": "Meeting Jesus Again for the First Time",
+      "authors": "Marcus J. Borg",
+      "categories": "Religion",
+      "thumbnail": "http://books.google.com/books/content?id=-_ieWUhA6V4C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Of the many recent books on the historical Jesus, none has explored what the latest biblical scholarship means for personal faith. Now, in Meeting Jesus Again for the First Time, Marcus Borg addresses the yearnings of those who want a fully contemporary faith that welcomes rather than oppresses our critical intelligence and openness to the best of historical scholarship. Borg shows how a rigorous examination of historical findings can lead to a new faith in Christ, one that is critical and, at the same time, sustaining. \"Believing in Jesus does not mean believing doctrines about him,\" Borg writes. \"Rather, it means to give one's heart, one's self at its deepest level, to . . . the living Lord.\" Drawing on his own journey from a naive, unquestioning belief in Christ through collegiate skepticism to a mature and contemporary Christian faith, Borg illustrates how an understanding of the historical Jesus can actually lead to a more authentic Christian life—one not rooted in creeds or dogma, but in a life of spiritual challenge, compassion, and community. In straightforward, accessible prose, Borg looks at the major findings of modern Jesus scholarship from the perspective of faith, bringing alive the many levels of Jesus' character: spirit person, teacher of alternative wisdom, social prophet, and movement founder. He also reexamines the major stories of the Old Testament vital to an authentic understanding of Jesus, showing how an enriched understanding of these stories can uncover new truths and new pathways to faith. For questioning believers, doubters, and reluctant unbelievers alike, Meeting Jesus Again for the First Time frees our understanding of Jesus' life and message from popular misconceptions and outlines the way to a sound and contemporary faith: \"For ultimately, Jesus is not simply a figure of the past, but a figure of the present. Meeting that Jesus—the living one who comes to us even now—will be like meeting Jesus again for the first time.\"",
+      "published_year": 1995.0
+    }
+  },
+  {
+    "pk": 74,
+    "model": "book.book",
+    "fields": {
+      "title": "Reading the Bible Again for the First Time",
+      "authors": "Marcus J. Borg",
+      "categories": "Religion",
+      "thumbnail": "http://books.google.com/books/content?id=pf0mlwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "One of the vital challenges facing thoughtful people today is how to read the Bible faithfully without abandoning our sense of truth and history. Reading the Bible Again for the First Time provides a much-needed solution to the problem of how to have a fully authentic yet contemporary understanding of the scriptures. Many mistakenly believe there are no choices other than fundamentalism or simply rejecting the Bible as something that can bring meaning to our lives. Answering this modern dilemma, acclaimed author Marcus Borg reveals how it is possible to reconcile the Bible with both a scientific and critical way of thinking and our deepest spiritual needs, leading to a contemporary yet grounded experience of the sacred texts. This seminal book shows you how to read the Bible as it should be examined—in an approach the author calls \"historical-metaphorical.\" Borg explores what the Scriptures meant to the ancient communities that produced and lived by them. He then helps us to discover the meaning of these stories, providing the knowledge and perspective to make the wisdom of the Bible an essential part of our modern lives. The author argues that the conventional way of seeing the Bible's origin, authority, and interpretation has become unpersuasive to millions of people in our time, and that we need a fresh way of encountering the Bible that takes the texts seriously but not literally, even as it takes seriously who we have become. Borg traces his personal spiritual journey, describing for readers how he moved from an unquestioning childhood belief in the biblical stories to a more powerful and dynamic relationship with the Bible as a sacred text brimming with meaning and guidance. Using his own experience as an example, he reveals how the modern crisis of faith is itself rooted in the misinterpretation of sacred texts as historical record and divine dictation, and opens readers to a truer, more abundant perspective. This unique book invites everyone—whatever one's religious background—to engage the Bible, wrestle with its meaning, explore its mysteries, and understand its relevance. Borg shows us how to encounter the Bible in a fresh way that rejects the limits of simple literalism and opens up rich possibilities for our lives.",
+      "published_year": 2002.0
+    }
+  },
+  {
+    "pk": 75,
+    "model": "book.book",
+    "fields": {
+      "title": "Shadow of the Almighty",
+      "authors": "Elisabeth Elliot",
+      "categories": "Religion",
+      "thumbnail": "http://books.google.com/books/content?id=QQCG9mNU1eAC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "The bestselling account of the martyrdom of Jim Elliot and four other missionaries at the hands of the Auca Indians in Ecuador. New introduction by the author.",
+      "published_year": 1989.0
+    }
+  },
+  {
+    "pk": 76,
+    "model": "book.book",
+    "fields": {
+      "title": "C.S. Lewis",
+      "authors": "C. S. Lewis",
+      "categories": "Religion",
+      "thumbnail": "http://books.google.com/books/content?id=vtr4NDL8AP8C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Known throughout the world as the intellect behind The Chronicles of Narnia and as the twentieth century's most influential Christian writer, C. S. Lewis has stirred millions of readers through his probing insights, passionate arguments, and provocative questions about God, love, life, and death. Gathered from the mass of his published works -- including The Screwtape Letters, Mere Christianity, The Four Loves, and God in the Dock -- as well as from letters, essays, and less familiar writings, this compendium contains a cross section of Lewis's finest work.",
+      "published_year": 1996.0
+    }
+  },
+  {
+    "pk": 77,
+    "model": "book.book",
+    "fields": {
+      "title": "Learning to Love",
+      "authors": "Thomas Merton",
+      "categories": "Religion",
+      "thumbnail": "http://books.google.com/books/content?id=U0nXswEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Having embraced a life of solitude in his own hermitage, Thomas Merton finds his faith tested beyond his imagination when a visit to the hospital leads to a clandestine affair of the heart. Jolted out of his comfortable routine, Merton is forced to reassess his need for love and his commitment to celibacy and the monastic vocation.This astonishing volume traces Merton’s struggle to reconcile his unexpected love with his sacred vows while continuing to grapple with the burning social issues of the day – including racial conflicts, the war in Vietnam, and the Arab-Israeli conflict – visiting and corresponding with high-profile friends like Thich Nhat Hanh and Joan Baez, and further developing his writing career. Revealing Merton to be ‘very human’ in his chronicles of the ecstasy and torment of being in love, Learning to Love comes full circle as Merton recommits himself completely and more deeply to his vocation even as he recognizes ‘my need for love, my loneliness, my inner division, the struggle in which solitude is at once a problem and a ‘solution’. And perhaps not a perfect solution either’ (11 May, 1967).",
+      "published_year": 1998.0
+    }
+  },
+  {
+    "pk": 78,
+    "model": "book.book",
+    "fields": {
+      "title": "Cash",
+      "authors": "Johnny Cash",
+      "categories": "Biography & Autobiography",
+      "thumbnail": "http://books.google.com/books/content?id=yL6MRZfrWjkC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "He was the \"Man in Black,\" a country music legend, and the quintessential American troubadour. He was an icon of rugged individualism who had been to hell and back, telling the tale as never before. In his unforgettable autobiography, Johnny Cash tells the truth about the highs and lows, the struggles and hard-won triumphs, and the people who shaped him. In his own words, Cash set the record straight -- and dispelled a few myths -- as he looked unsparingly at his remarkable life: from the joys of his boyhood in Dyess, Arkansas to superstardom in Nashville, Tennessee, the road of Cash's life has been anything but smooth. Cash writes of the thrill of playing with Elvis, the comfort of praying with Billy Graham; of his battles with addiction and of the devotion of his wife, June; of his gratitude for life, and of his thoughts on what the afterlife may bring. Here, too, are the friends of a lifetime, including Willie Nelson, Roy Orbison, Bob Dylan, and Kris Kristofferson. As powerful and memorable as one of his classic songs, Cash is filled with the candor, wit, and wisdom of a man who truly \"walked the line.\"",
+      "published_year": 2003.0
+    }
+  },
+  {
+    "pk": 79,
+    "model": "book.book",
+    "fields": {
+      "title": "The Collected Letters of C.S. Lewis, Volume 1",
+      "authors": "C. S. Lewis",
+      "categories": "Biography & Autobiography",
+      "thumbnail": "http://books.google.com/books/content?id=eOxfuF6BQ0gC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "A first volume of personal correspondence written by classic author C. S. Lewis includes letters penned during his childhood, World War I army days, education at Oxford, atheist period, and early friendship with J. R. R. Tolkien.",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 80,
+    "model": "book.book",
+    "fields": {
+      "title": "Touching the Void",
+      "authors": "Joe Simpson",
+      "categories": "Sports & Recreation",
+      "thumbnail": "http://books.google.com/books/content?id=Qg8DO-EqFzoC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Joe Simpson and his climbing partner, Simon Yates, had just reached the top of a 21,000-foot peak in the Andes when disaster struck. Simpson plunged off the vertical face of an ice ledge, breaking his leg. In the hours that followed, darkness fell and a blizzard raged as Yates tried to lower his friend to safety. Finally, Yates was forced to cut the rope, moments before he would have been pulled to his own death. The next three days were an impossibly grueling ordeal for both men. Yates, certain that Simpson was dead, returned to base camp consumed with grief and guilt over abandoning him. Miraculously, Simpson had survived the fall, but crippled, starving, and severely frostbitten was trapped in a deep crevasse. Summoning vast reserves of physical and spiritual strength, Simpson crawled over the cliffs and canyons of the Andes, reaching base camp hours before Yates had planned to leave. How both men overcame the torments of those harrowing days is an epic tale of fear, suffering, and survival, and a poignant testament to unshakable courage and friendship.",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 81,
+    "model": "book.book",
+    "fields": {
+      "title": "Anybody Out There?",
+      "authors": "Marian Keyes",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=79T7wAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Marian Keyes has introduced readers to the lives, loves, and foibles of the five Walsh sisters -- Claire, Maggie, Rachel, Helen, and Anna -- and their crazy mammy. In this funny, heartbreaking, and triumphant new tale set in the Big Apple, it's Anna's turn in the spotlight. Life is perfect for Anna Walsh. She has the \"Best Job in the World\" as a PR exec for a top-selling urban beauty brand, a lovely apartment in New York, and a perfect husband -- the love of her life, Aidan Maddox. Until the morning she wakes up in her mammy's living room in Dublin with stitches in her face, a dislocated knee, and completely smashed-up hands -- and no memory of how she got there. While her mammy plays nursemaid (just like all of her favorite nurses on her soaps), and her sister Helen sits in wet hedges doing her private investigator work for Lucky Star PI, Anna tries to get better and keeps wondering why Aidan won't return her phone calls or e-mails. Recuperating from her injuries, a mystified Anna returns to Manhattan. Slowly beginning to remember what happened, she sets off on a search to find Aidan -- a hilarious quest involving lilies (she can't stop smelling them), psychics, mediums, and anyone in the city who can promise her a reunion with her beloved. . . . Written in her classic style, marrying the darker parts of life with humor and wit, Anybody Out There? is Marian Keyes's best novel to date, a wonderfully charming look at love here and ever after.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 82,
+    "model": "book.book",
+    "fields": {
+      "title": "The Confusion",
+      "authors": "Neal Stephenson",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=NJbllgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "In the year 1689, a cabal of Barbary galley slaves -- including one Jack Shaftoe, aka King of the Vagabonds, aka Half-Cocked Jack -- devises a daring plan to win freedom and fortune. A great adventure ensues -- a perilous race for an enormous prize of silver ... nay, gold ... nay, legendary gold. In Europe, the exquisite and resourceful Eliza, Countess de la Zeur, is stripped of her immense personal fortune by France's most dashing privateer. Penniless and at risk from those who desire either her or her head (or both), she is caught up in a web of international intrigue, even as she desperately seeks the return of her most precious possession. Meanwhile, Newton and Leibniz continue to propound their grand theories as their infamous rivalry intensifies, stubborn alchemy does battle with the natural sciences, dastardly plots are set in motion ... and Daniel Waterhouse seeks passage to the Massachusetts colony in hopes of escaping the madness into which his world has descended. This P.S. edition features an extra 16 pages of insights into the book, including author interviews, recommended reading, and more.",
+      "published_year": 2005.0
+    }
+  },
+  {
+    "pk": 83,
+    "model": "book.book",
+    "fields": {
+      "title": "Behind the Curtain",
+      "authors": "Peter Abrahams",
+      "categories": "Juvenile Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=c5FuIIBgTGQC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "In echo falls you never know what's coming next -- and everyone has a secret. Things are amiss at 99 Maple Lane: Ingrid's dad's job is in jeopardy, but he won't explain why. Ingrid's brother, Ty, is getting buff -- really buff -- but when Ty starts getting moody, Ingrid wonders if there's more to his physical fitness than lifting weights. Meanwhile, Ingrid's beloved soccer coach is replaced by an icy newcomer named Julia LeCaine, who seems a little too savvy to be in it for the postgame pizza. True to her hero, Sherlock Holmes, Ingrid begins fishing around to find out who's really pulling the strings in Echo Falls. But one morning, while en route to the dreaded MathFest, Ingrid is kidnapped and locked in the trunk of a car. Even if she escapes, will anyone believe her story? In this sequel to Down the Rabbit Hole a clever young girl learns that mysterious forces are at work in her town -- and exposing them could put her life in jeopardy.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 84,
+    "model": "book.book",
+    "fields": {
+      "title": "Wicked Musical Tie-in Edition",
+      "authors": "Gregory Maguire",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=MLEujRNyoMUC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "When Dorothy triumphed over the Wicked Witch of the West in L. Frank Baum's classic tale, we heard only her side of the story. But what about her arch-nemesis, the mysterious Witch? Where did she come from? How did she become so wicked? And what is the true nature of evil? Gregory Maguire creates a fantasy world so rich and vivid that we will never look at Oz the same way again. Wicked is about a land where animals talk and strive to be treated like first-class citizens, Munchkinlanders seek the comfort of middle-class stability, and the Tin Man becomes a victim of domestic violence. And then there is the little green-skinned girl named Elphaba, who will grow up to become the infamous Wicked Witch of the West, a smart, prickly, and misunderstood creature who challenges all our preconceived notions about the nature of good and evil.",
+      "published_year": 2004.0
+    }
+  },
+  {
+    "pk": 85,
+    "model": "book.book",
+    "fields": {
+      "title": "Son of a Witch",
+      "authors": "Gregory Maguire",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=5-3f3naMQ6QC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Ten years after the publication of Wicked, beloved novelist Gregory Maguire returns at last to the land of Oz. There he introduces us to Liir, an adolescent boy last seen hiding in the shadows of the castle after Dorothy did in the Witch. Bruised, comatose, and left for dead in a gully, Liir is shattered in spirit as well as in form. But he is tended to at the Cloister of Saint Glinda by the silent novice called Candle, who wills him back to life with her musical gifts. What dark force left Liir in this condition? Is he really Elphaba's son? He has her broom and her cape—but what of her powers? Can he find his supposed half-sister, Nor, last seen in the forbidding prison, Southstairs? Can he fulfill the last wishes of a dying princess? In an Oz that, since the Wizard's departure, is under new and dangerous management, can Liir keep his head down long enough to grow up? For the countless fans who have been dazzled and entranced by Maguire's Oz, Son of a Witch is the rich reward they have awaited so long.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 86,
+    "model": "book.book",
+    "fields": {
+      "title": "Beauty",
+      "authors": "Robin McKinley",
+      "categories": "Juvenile Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=EaWWnkiShpIC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "A strange imprisonment Beauty has never liked her nickname. She is thin and awkward; it is her two sisters who are the beautiful ones. But what she lacks in looks, she can perhaps make up for in courage. When her father comes home with the tale of an enchanted castle in the forest and the terrible promise he had to make to the Beast who lives there, Beauty knows she must go to the castle, a prisoner of her own free will. Her father protests that he will not let her go, but she answers, \"Cannot a Beast be tamed?\" Robin McKinley's beloved telling illuminates the unusual love story of a most unlikely couple: Beauty and the Beast.",
+      "published_year": 2005.0
+    }
+  },
+  {
+    "pk": 87,
+    "model": "book.book",
+    "fields": {
+      "title": "Mating in Captivity",
+      "authors": "Esther Perel",
+      "categories": "Psychology",
+      "thumbnail": "http://books.google.com/books/content?id=-HIhMOQanIEC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "A guide for loving couples who are looking to renew sexual passion in their lives explains how societal taboos and ideals about domestic equality have compromised the healthy expression of eroticism in today's relationships, in a resource that explains how to overcome personal constraints for greater intimacy. 40,000 first printing.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 88,
+    "model": "book.book",
+    "fields": {
+      "title": "Forgotten New York",
+      "authors": "Kevin Walsh",
+      "categories": "Travel",
+      "thumbnail": "http://books.google.com/books/content?id=77aiRf018Y0C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Forgotten New York is your passport to more than 300 years of history, architecture, and memories hidden in plain sight. Houses dating to the first Dutch settlers on Staten Island; yellow brick roads in Brooklyn; clocks embedded in the sidewalk in Manhattan; bishop's crook lampposts in Queens; and a white elephant in the Bronx—this is New York and this is your guide to seeing it all. Forgotten New York covers all five boroughs with easy-to-use maps and suggested routes to hundreds of out-of-the way places, antiquated monuments, streets to nowhere, and buildings from a time lost. Forgotten New York features: Quiet Places Truly Forgotten History Happened Here What Is This Thing? Forgotten People And so much more",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 89,
+    "model": "book.book",
+    "fields": {
+      "title": "The Dead Beat",
+      "authors": "Marilyn Johnson",
+      "categories": "Social Science",
+      "thumbnail": "http://books.google.com/books/content?id=b03jlgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Marilyn Johnson was enthralled by the remarkable lives that were marching out of this world—so she sought out the best obits in the English language and the people who spent their lives writing about the dead. She surveyed the darkest corners of Internet chat rooms, and made a pilgrimage to London to savor the most caustic and literate obits of all. Now she leads us on a compelling journey into the cult and culture behind the obituary page and the unusual lives we don't quite appreciate until they're gone.",
+      "published_year": 2007.0
+    }
+  },
+  {
+    "pk": 90,
+    "model": "book.book",
+    "fields": {
+      "title": "The Reading Group",
+      "authors": "Elizabeth Noble",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=IagWjwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "The Reading Group follows the trials and tribulations of a group of women who meet regularly to read and discuss books.Over the course of a year, each of these women become intertwined, both in the books they read and within each other's lives. Inspired by a shared desire for conversation, a good book and a glass of wine-Clare, Harriet, Nicole, Polly, and Susan undergo startling revelations and transformations despite their differences in background, age and respective dilemmas. What starts as a reading group gradually evolves into a forum where the women may express their views through the books they read and grow to become increasingly more open as the bonds of friendship cement. In The Reading Group, Noble reveals the many complicated paths in life we all face as well as the power and importance of friendship. This P.S. edition features an extra 16 pages of insights into the book, including author interviews, recommended reading, and more.",
+      "published_year": 2005.0
+    }
+  },
+  {
+    "pk": 91,
+    "model": "book.book",
+    "fields": {
+      "title": "YOU: The Owner's Manual",
+      "authors": "Michael F Roizen;Mehmet C Oz",
+      "categories": "Health & Fitness",
+      "thumbnail": "http://books.google.com/books/content?id=WMtZ29Fjx2MC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Outlines steps to achieving overall physical health, addressing each area of the body in a series of chapters designed to challenge popular myths while informing readers on a range of dietary, exercise, and therapeutic concerns.",
+      "published_year": 2005.0
+    }
+  },
+  {
+    "pk": 92,
+    "model": "book.book",
+    "fields": {
+      "title": "The Final Solution",
+      "authors": "Michael Chabon",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=xXtptpBIYP8C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Retired to the English countryside, an eighty-nine-year-old man, rumored to be a once-famous detective, is more concerned with his beekeeping than with his fellow man. Into his life wanders Linus Steinman, nine years old and mute, who has escaped from Nazi Germany with his sole companion: an African gray parrot. What is the meaning of the mysterious strings of German numbers the bird spews out -- a top-secret SS code? The keys to a series of Swiss bank accounts? Or do they hold a significance both more prosaic and far more sinister? Though the solution may be beyond even the reach of the once-famous sleuth, the true story of the boy and his parrot is subtly revealed in a wrenching resolution.",
+      "published_year": 2005.0
+    }
+  },
+  {
+    "pk": 93,
+    "model": "book.book",
+    "fields": {
+      "title": "The Cat's Pajamas",
+      "authors": "Ray Bradbury",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=Xb6MUmQrUMAC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "From the winner of the National Book Foundations' 2000 Medal for Distinguished Contribution to American Letters comes a \"sweet, funny . . . thought–provoking\" (Milwaukee Journal Sentinel) collection of short stories. As in his most recent major fiction collections, One More for the Road (1999) and Driving Blind (1997), Ray Bradbury has once again pulled together a stellar group of stories sure to delight readers of all ages. In The Cat's Pyjamas we are treated to a treasure trove of Bradbury gems old and new –– eerie and strange, nostalgic and bittersweet, searching and speculative –– all but two of which have never been published before. The Cat's Pyjamas is a joyous celebration of the lifelong work of a literary legend.",
+      "published_year": 2005.0
+    }
+  },
+  {
+    "pk": 94,
+    "model": "book.book",
+    "fields": {
+      "title": "Holy Skirts",
+      "authors": "Rene Steinke",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=BjP7lwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "No one in 1917 New York had ever encountered a woman like the Bar-oness Elsa von Freytag-Loringhoven -- poet, artist, proto-punk rocker, sexual libertine, fashion avatar, and unrepentant troublemaker. When she wasn't stalking the streets of Greenwich Village wearing a brassiere made from tomato cans, she was enthusiastically declaiming her poems to sailors in beer halls or posing nude for Man Ray or Marcel Duchamp. In an era of brutal war, technological innovation, and cataclysmic change, the Baroness had resolved to create her own destiny -- taking the center of the Dadaist circle, breaking every bond of female propriety . . . and transforming herself into a living, breathing work of art.",
+      "published_year": 2005.0
+    }
+  },
+  {
+    "pk": 95,
+    "model": "book.book",
+    "fields": {
+      "title": "A False Mirror",
+      "authors": "Charles Todd",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=MMG3b9fo-hYC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Summoned to a small harbor town by a former trenchmate falsely accused of assaulting an ex-lover's husband, Scotland Yard inspector Ian Rutledge is reminded of an affair from his own past and investigates a bizarre coincidence.",
+      "published_year": 2007.0
+    }
+  },
+  {
+    "pk": 96,
+    "model": "book.book",
+    "fields": {
+      "title": "Cracks in My Foundation",
+      "authors": "Marian Keyes",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=cC8-lwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Go further under the covers and stay in bed a little longer with Marian Keyes in this winning follow-up to her smash essay collection, Under the Duvet. Written in the witty, forthright style that has earned her legions of devoted readers, Cracks in My Foundation offers an even deeper and more candid look into this beloved author's mind and heart, exploring such universal themes as friends and family, home, glamour and beauty, children, travel, and more. Marian's hilarious and thoughtful take on life makes her readers feel they are reading a friend, not just an author. Marian continues to entertain with her reports from the trenches, and throws in some original short fiction as well. Whether it's visiting Siberia, breaking it off with an old hairdresser, shopping (of course!), turning forty, living with her beloved husband, Himself (a man beyond description), or musing on the F word (feminism), Marian shares the joys, passions, and sorrows of her world and helps us feel good about our own. So grab a latte and a pillow and get ready to laugh your slippers off!",
+      "published_year": 2005.0
+    }
+  },
+  {
+    "pk": 97,
+    "model": "book.book",
+    "fields": {
+      "title": "Mysteries of Pittsburgh",
+      "authors": "Michael Chabon",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=wh8B41h8bqQC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "By the Pulitzer Prize-winning author of The Amazing Adventures of Kavalier & Clay This P.S. edition features an extra 16 pages of insights into the book, including author interviews, recommended reading, and more.",
+      "published_year": 2005.0
+    }
+  },
+  {
+    "pk": 98,
+    "model": "book.book",
+    "fields": {
+      "title": "Everything Is Illuminated tie-in",
+      "authors": "Jonathan Safran Foer",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=tsO2vgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "With only a yellowing photograph in hand, a young man -- also named Jonathan Safran Foer -- sets out to find the woman who may or may not have saved his grandfather from the Nazis. Accompanied by an old man haunted by memories of the war; an amorous dog named Sammy Davis, Junior, Junior; and the unforgettable Alex, a young Ukrainian translator who speaks in a sublimely butchered English, Jonathan is led on a quixotic journey over a devastated landscape and into an unexpected past. By turns comic and tragic, but always passionate, wildly inventive, and touched with an indelible humanity, this debut novel is a powerful, deeply felt story of searching: for the past, family, and truth.",
+      "published_year": 2005.0
+    }
+  },
+  {
+    "pk": 99,
+    "model": "book.book",
+    "fields": {
+      "title": "Flight of the Nighthawks",
+      "authors": "Raymond E. Feist",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=cMRnRK9KE9wC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "A new evil threatens Midkemia, its web stretching from the deepest criminal underworld all the way up to the highest seats of power in ancient Kesh. And the Conclave of Shadows, charged unexpectedly with the training of two apprentices, must also best powerful agents of the darkest magic . . . for the fate of two worlds lies in the balance. The New York Times bestselling author and master of fantasy Raymond E. Feist returns to his signature world of Midkemia in this first book in a gripping new trilogy that ushers in the third, and most dramatic, Riftwar yet: the Darkwar. In the middle of the night on Sorcerer's Isle, the powerful sorcerer Pug is awakened from a nightmare that portends destruction for all of Midkemia. Disturbed by the dream, Pug calls for a convening of the Conclave of Shadows. Though Pug does not yet know it, his son Magnus has discovered the cause of Pug's prophetic dream: a beacon has been unleashed, directing a vast army of alien invaders to Midkemia, an army so formidable that even the might of the Tsurani Empire might fall before its fury. Meanwhile, in far Stardock town, two boys are coming of age. But on the dusty path that leads them from home they are thrust by fate into a life undreamed of, becoming enmeshed in intrigue, murder, and treason. Though untrained and unready, they are called upon by the mysterious Conclave to travel deep into the heart of the Empire of Great Kesh, to confront a plot so dark and twisted it will implicate even the highest-ranking nobles of the Empire, even members of the royal family itself. And behind this plot they discover the ancient Brotherhood of Death, the clan of assassins known as the Nighthawks. And Pug will find himself once again facing his old nemesis, the evil wizard formerly known as Sidi, now Leso Varen, in a confrontation with everything at stake: his honor, his life, and the future of Midkemia.",
+      "published_year": 2006.0
+    }
+  },
+  {
+    "pk": 100,
+    "model": "book.book",
+    "fields": {
+      "title": "Into a Dark Realm",
+      "authors": "Raymond E. Feist",
+      "categories": "Fiction",
+      "thumbnail": "http://books.google.com/books/content?id=pSzYD55i6nAC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "Having successfully prevented a civil war within the Empire of Great Kesh, Pug and his allies in the Conclave of Shadows search for the mad sorcerer Leso Varen in the hopes of destroying the Guild of Assassins, an effort that is challenged by the sorcerer's powerful protectors and a planned invasion by the Dasati. By the author of Flight of the Nighthawks. 75,000 first printing.",
+      "published_year": 2007.0
+    }
+  }
+]

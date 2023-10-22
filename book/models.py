@@ -1,3 +1,9 @@
 from django.db import models
 
-# Create your models here.
+class Book(models.Model) :
+    title = models.CharField(max_length=255)
+    authors = models.CharField(max_length=255)
+    categories = models.CharField(max_length=255)
+    thumbnail =  models.TextField()
+    description = models.TextField()
+    published_year = models.IntegerField()
