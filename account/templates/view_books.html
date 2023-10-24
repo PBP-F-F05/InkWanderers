@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ini adalah daftar buku yang tersedia
+    {% for book in books %}
+    <li>
+            {% csrf_token %}    
+            <ul>
+                <p>{{ book.title }}</p>
+                <p>{{ book.authors }}</p>
+            </ul>
+            <a href="/account/add_book/{{book.id}}">tambahkan ke keranjang</a>
+            <!-- <input type="hidden" name="book" value="{{ book.id }}"> -->
+            <!-- <button type="submit">Masukkan ke history book</button> -->
+    </li>
+    {% endfor %}
+</body>
+</html>

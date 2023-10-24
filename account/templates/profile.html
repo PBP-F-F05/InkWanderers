@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    halo, anda ({{request.user.role}}) telah berhasil login
+    <a href="{% url 'account:logout_user' %}">logout</a>
+    <a href="{% url 'account:password_change' %}">password change</a>
+    <a href="{% url 'account:view_books' %}">Lihat buku</a>
+    <a href="{% url 'account:view_history_book' %}">History buku</a>
+</body>
+</html>

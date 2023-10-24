@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Registration</title>
+    </head>
+    <body>
+        <h2>Registration</h2>
+        <form method="post" action="{% url 'account:register_user' %}">
+            {% csrf_token %}
+    
+            {{ form.as_p }}  {# This renders the form fields, including the 'role' field #}
+    
+            <input type="submit" value="Register">
+        </form>
+    
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    
+        <a href="{% url 'account:login_user' %}">Already have an account? Login</a>
+
+    </body>
+    </html>
+    
+
+</body>
+</html>
