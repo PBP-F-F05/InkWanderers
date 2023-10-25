@@ -4,12 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        /* Remove tag a styling */
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+        a:visited{
+            color: inherit;
+        }
+        /* ================ */
+        /* Navigation bar styling */
+        nav{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #050A30;
+            height: 100px;
+            font-size: large;
+        }
+        #navbar-center{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            color: white;
+        }
+        nav a{
+            padding-left: 25px;
+        }
+        /* ================ */
+
+    </style>
 </head>
 <body>
-    halo, anda ({{request.user.role}}) telah berhasil login
-    <a href="{% url 'account:logout_user' %}">logout</a>
-    <a href="{% url 'account:password_change' %}">password change</a>
-    <a href="{% url 'account:view_books' %}">Lihat buku</a>
-    <a href="{% url 'account:view_history_book' %}">History buku</a>
+    <nav id="navbar" >
+        <div id="navbar-center">
+            <a href="{% url 'account:logout_user' %}">Logout</a>
+            <a href="{% url 'account:password_change' %}">Ganti Password</a>
+            <a href="{% url 'account:view_books' %}">Lihat buku</a>
+            <a href="{% url 'account:view_history_book' %}">Buku Pernah Dipinjam</a>    
+        </div>
+    </nav>
+    <div id="user-information">
+        <div id="user-profile-picture">
+            <img src="{{profile.profile_picture_url}}" alt="">
+        </div>
+        <div id="user-profile-information">
+            <p>{{profile.user.username}}</p>
+            <a href="">
+                <p>Followers</p>
+                <p>{{profile.followers.count}}</p>
+            </a>
+            <a href="">
+                <p>Following</p>
+                <p>{{profile.following.count}}</p>
+            </a>
+        </div>
+
+    </div>
+
+    <div id="">
+
+    </div>
 </body>
 </html>

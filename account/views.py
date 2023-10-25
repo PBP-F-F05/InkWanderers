@@ -52,7 +52,7 @@ def login_user(request):
         else:
             messages.info(request, 'Sorry, incorrect username or password. Please try again.')
     context = {}
-    return render(request, 'login.html', context)
+    return render(request, 'login2.html', context)
 
 def logout_user(request):
     logout(request)
