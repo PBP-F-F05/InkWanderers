@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+{% endblock meta %}
+
+
+{% block content %}
+    <div id="login-center">
+        <div id="login-form-center">
+            <h1 style="text-align: center;">Sign<span style="color:#ff5003; font-style: italic;"> up</span></h1>
+            <form method="POST" action="" style="text-align: center;">
+                {% csrf_token %}
+                    <!-- <label for="username">Username or Email:</label> -->
+                    <input type="text" id="username-field" name="username" required placeholder="Username">
+                    <br>
+                    
+                    <!-- <label for="password">Password:</label> -->
+                    <input type="password" id="password-field" name="password" required placeholder="Password">
+                    <br>
+                    
+                    <input id="login-btn" type="submit" value="Login">
+                    
+                    <br>
+                    {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                        <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                    
+                    <a style="color:  #003f7d;" href="{% url 'account:register_user' %}">Sudah punya akun</a>
+            </form>
+        </div>
+
+    </div>
+
+{% endblock content %}

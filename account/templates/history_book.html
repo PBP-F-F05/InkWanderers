@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ini adalah daftar buku yang pernah dipinjam
+    {% for history_book in history_book_to_book %}
+    <li>
+            {% csrf_token %}    
+            <ul>
+                <p>{{ history_book.book.title }}</p>
+                <p>{{ history_book.book.authors }}</p>
+                <p>{{history_book.books_count}}</p>
+            </ul>
+            <!-- <input type="hidden" name="book" value="{{ book.id }}"> -->
+            <!-- <button type="submit">Masukkan ke history book</button> -->
+    </li>
+    {% endfor %}
+</body>
+</html>
