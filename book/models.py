@@ -7,3 +7,11 @@ class Book(models.Model) :
     thumbnail =  models.TextField()
     description = models.TextField()
     published_year = models.IntegerField()
+    is_borrowed = models.BooleanField(default=False)
+    review_count = models.IntegerField(default=0)
+    review_points = models.IntegerField(default=0)
+    
+
+    def __str__(self):
+        return self.title
+    
