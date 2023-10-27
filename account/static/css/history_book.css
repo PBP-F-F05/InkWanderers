@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+}
+#list-books{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+.product-box-a{
+    border: none; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);     
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 9 / 18;
+    width: 175px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.product-box-a:hover{
+    border: none; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);     
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 9 / 18;
+    width: 175px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.product-box{
+    width: 100%;
+
+}
+img{
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.product-information{
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.product-information2{
+    height: 50%;
+}
+.review-container{
+    height: 50%;
+}
+
+.book-title{
+    font-weight: bold;
+    font-size: medium;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* limits the content to a maximum of 2 lines */
+    -webkit-box-orient: vertical;
+}
+.book-authors{
+    font-size: small;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* limits the content to a maximum of 2 lines */
+    -webkit-box-orient: vertical;
+}
+.book-review-count{
+    font-size: small;
+}
+.books-count{
+    font-size: small;
+    padding-bottom: 10px;
+}
+.review-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.review-container p, i{
+    margin-top: 15px;
+    margin-left: 5px;
+}
+i{
+    color: #050A30;
+}

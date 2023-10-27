@@ -1179,7 +1179,7 @@
     "pk": 99,
     "model": "book.Book",
     "fields": {
-      "title": "Flight of the Nighthawks",
+      "title": "Flight of the Nighthawks",  
       "authors": "Raymond E. Feist",
       "categories": "Fiction",
       "thumbnail": "http://books.google.com/books/content?id=cMRnRK9KE9wC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
