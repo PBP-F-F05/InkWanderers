@@ -29,14 +29,14 @@ body{
     border-radius: 10px;
     margin: 20px;
     padding: 20px;
-    height: 500px;
-    width: 70%;
+    height: 400px;
+    width: 60%;
 }
 input{
     margin-top: 20px;
-    font-size: larger;
+    font-size: small;
     width: 60%;
-    height: 50px;
+    height: 35px;
     background-color: transparent;
 }
 #login-btn{

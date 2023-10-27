@@ -1,3 +1,4 @@
+from http.client import HTTPResponse
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 
@@ -8,7 +9,7 @@ from django.contrib.auth import login
 from .models import User
 from django.contrib.auth import authenticate
 from django.contrib import messages  
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
 import datetime
 from django.contrib.auth.decorators import login_required
@@ -66,7 +67,7 @@ def profile(request):
     context = {
                'profile':profile
                }
-    return render(request, 'profile.html', context)
+    return render(request, 'profile2.html', context)
 
 @login_required
 def password_change(request):
@@ -82,6 +83,26 @@ def password_change(request):
         form = PasswordChangeForm(user=request.user)
 
     return render(request, 'password_change.html', {'form': form})
+
+@login_required
+def password_change_by_ajax(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(user=request.user, data=request.POST)
+        print("Line 91")
+        print(request.POST.get("old_password"))
+        print(request.POST.get("password2"))
+        print(form.is_valid())
+        if form.is_valid():
+            print("Line 93")
+            user = form.save()
+            # Updating the user's session to avoid logging them out
+            update_session_auth_hash(request, user)
+            messages.success(request, 'Your password was successfully updated.')
+            return redirect(reverse('account:profile'))
+    else:
+        form = PasswordChangeForm(user=request.user)
+
+    return HttpResponseNotFound()
 
 from book.models import Book
 @login_required
@@ -120,8 +141,26 @@ def view_history_book(request):
     profile = Profile.objects.filter(user = user)[0]
     history_book = History_Book.objects.filter(profile = profile)[0]
     history_book_to_book = History_Book_To_Book.objects.filter(history_book = history_book)
-
+    history_book_to_book_by_highest_number = History_Book_To_Book.objects.filter(history_book = history_book).order_by('-books_count')
     context={
-        'history_book_to_book':history_book_to_book
+        'history_book_to_book':history_book_to_book_by_highest_number
     }
-    return render(request, 'history_book.html', context)
+    return render(request, 'history_book2.html', context)
+
+from django.core import serializers
+from django.http import HttpResponse
+from account.models import HistoryBookToBookSerializer
+from rest_framework.response import Response
+
+from rest_framework.decorators import api_view
+@api_view(('GET',))
+def show_json_by_highest_number(request):
+    user = request.user
+    profile = Profile.objects.filter(user = user)[0]
+    history_book = History_Book.objects.filter(profile = profile)[0]
+    data = History_Book_To_Book.objects.filter(history_book = history_book).order_by('-books_count')
+    serializer = HistoryBookToBookSerializer(data, many=True)
+
+    return Response(data = serializer.data)
+    
+    # return HttpResponse(serializers.serialize("json", data), content_type="application/json")
