@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>My Reviews</h1>
+
+    {% for review in reviews %}
+
+        <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-1">
+                <img src="{{review.book.thumbnail}}" class="img-fluid rounded-start">
+                <div class="card-title"><b>{{review.book.title}}</b></div>
+                <a href="#" class="btn btn-primary">Remove</a>
+              </div>
+              <div class="col-md-8">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">My Rating: {{review.rating}}</li>
+                    <li class="list-group-item">{{review.review}}</li>
+                </ul>
+              </div>
+              
+            </div>
+          </div>
+    {% endfor %}
+{% endblock content %}

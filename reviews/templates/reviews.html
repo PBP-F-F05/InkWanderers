@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="rating-points" data-review-points="{{book.review_points}}"></div>
+<div id="rating-count" data-review-count="{{book.review_count}}"></div>
+<div class="row">
+    <div class="col-4">
+        <div class="card text-center">
+            <img src={{book.thumbnail}} style="width: 18rem; margin-left: auto;margin-right: auto;">
+            <div class="card-title">{{book.title}}</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Authors: {{book.authors}}</li>
+                <li class="list-group-item">{{book.description}}</li>
+                <li class="list-group-item" id="book-rating"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-8">
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+            {% for review in reviews %}
+                <div class="card" style="margin: 20px;">
+                    <div class="card-header">{{review.user.username}}</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Rate: {{review.rating}}</li>
+                        <li class="list-group-item">
+                            {{review.review}}   
+                        </li>
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<script>
+    var review_points = document.getElementById('rating-points').getAttribute('data-review-points');
+    var review_count = document.getElementById('rating-count').getAttribute('data-review-count');
+    var rating = review_points/review_count;
+    document.getElementById('book-rating').innerHTML= `Rating ${rating}`;
+</script>
+{% endblock content %}
