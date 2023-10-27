@@ -1,5 +1,140 @@
-{% extends 'base.html' %}
+{% extends 'landing_page.html' %}
 
 {% block content %}
-    <h1>Admin</h1>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New Book</button>
+<div class="input-group mb-3">
+  <div class="input-group-append">
+    <select class="custom-select" id="searchCategory">
+        <option value="title">Title</option>
+        <option value="authors">Author</option>
+        <option value="description">Description</option>]
+    </select>
+  </div>
+  <input type="text" class="form-control" id="search" placeholder="Search Products">
+</div>
+
+
+
+<div id="product_cards" class="card-group"></div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Book</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="form" onsubmit="return false;">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="title" class="col-form-label">Title:</label>
+                        <input type="text" class="form-control" id="title" name="title"></input>
+                    </div>
+                    <div class="mb-3">
+                        <label for="authors" class="col-form-label">Author:</label>
+                        <input type="text" class="form-control" id="authors" name="authors"></input>
+                    </div>
+                    <div class="mb-3">
+                      <label for="categories" class="col-form-label">Category:</label>
+                      <input type="text" class="form-control" id="categories" name="categories"></input>
+                  </div>
+                  <div class="mb-3">
+                    <label for="thumbnail" class="col-form-label">Image URL:</label>
+                    <textarea class="form-control" id="thumbnail" name="thumbnail"></textarea>
+                  </div>
+                  <div class="mb-3">
+                      <label for="description" class="col-form-label">Description:</label>
+                      <textarea class="form-control" id="description" name="description"></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="published_year" class="col-form-label">Year Published:</label>
+                    <input type="number" class="form-control" id="published_year" name="published_year"></input>
+                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="button_add" data-bs-dismiss="modal">Add Book</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  async function getProducts() {
+    return fetch("{% url 'main:get_books_json' %}").then((res) => res.json())
+  } 
+
+  async function refreshProducts() {
+    const productCardsContainer = document.getElementById("product_cards");
+    productCardsContainer.innerHTML = "";
+    
+    const products = await getProducts();
+    const searchInput = document.getElementById("search");
+    const searchText = searchInput.value.trim().toLowerCase();
+    const searchCategory = document.getElementById("searchCategory").value;
+
+    products.forEach((product) => {
+        const productValue = product.fields[searchCategory].toLowerCase();
+      
+
+      if (productValue.includes(searchText) || (searchText === "")) {
+        const card = document.createElement("div");
+        card.classList.add("col-3");
+
+        card.innerHTML = `
+            <div class="card mb-3" style="width: 18rem; border-radius: 20px; padding-top: 10px; padding-left: 10px; padding-right: 10px; align-items: center;"">
+                <img src="${product.fields.thumbnail}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">${product.fields.title}</h5>
+                    <p class="card-text">${truncateDescription(product.fields.description, 100)}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Year published: ${product.fields.published_year}</li>
+                </ul>
+                
+                <div class="card-body">
+                </div>
+            </div>`;
+
+        productCardsContainer.appendChild(card);
+        }
+    });
+}
+
+function truncateDescription(description, limit) {
+  if (description.length > limit) {
+      return description.substring(0, limit) + '...';
+  }
+  return description;
+}
+
+
+// Attach the refreshProducts function to the input field's input event
+const searchInput = document.getElementById("search");
+searchInput.addEventListener("input", refreshProducts);
+
+// Attach the refreshProducts function to the select element's change event
+const searchCategorySelect = document.getElementById("searchCategory");
+searchCategorySelect.addEventListener("change", refreshProducts)
+
+
+refreshProducts()
+  
+  function addProduct() {
+      fetch("{% url 'main:add_book_ajax' %}", {
+          method: "POST",
+          body: new FormData(document.querySelector('#form'))
+      }).then(refreshProducts)
+
+      document.getElementById("form").reset()
+      return false
+  }
+
+  document.getElementById("button_add").onclick = addProduct
+</script>
+
 {% endblock content %}
+

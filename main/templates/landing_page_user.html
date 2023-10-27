@@ -1,5 +1,72 @@
-{% extends 'base.html' %}
+{% extends 'landing_page.html' %}
 
 {% block content %}
-    <h1>User</h1>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" id="search" placeholder="Search Products">
+        <div class="input-group-append">
+            <select class="custom-select" id="searchCategory">
+                <option value="title">Title</option>
+                <option value="authors">Author</option>
+                <option value="description">Description</option>]
+            </select>
+        </div>
+    </div>
+
+    <div id="product_cards" class="card-group"></div>
+
+    <script>
+        async function getProducts() {
+          return fetch("{% url 'main:get_books_json' %}").then((res) => res.json())
+        } 
+      
+        async function refreshProducts() {
+          const productCardsContainer = document.getElementById("product_cards");
+          productCardsContainer.innerHTML = "";
+          
+          const products = await getProducts();
+          const searchInput = document.getElementById("search");
+          const searchText = searchInput.value.trim().toLowerCase();
+          const searchCategory = document.getElementById("searchCategory").value;
+      
+          products.forEach((product) => {
+              const productValue = product.fields[searchCategory].toLowerCase();
+            
+      
+            if (productValue.includes(searchText) || (searchText === "")) {
+              const card = document.createElement("div");
+              card.classList.add("col-4");
+      
+              card.innerHTML = `
+                  <div class="card" style="width: 18rem; border-radius: 20px; padding-left: 10px; padding-right: 10px; align-items: center;"">
+                      <img src="${product.fields.thumbnail}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">${product.fields.title}</h5>
+                          <p class="card-text">${product.fields.description}</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Year published: ${product.fields.published_year}</li>
+                      </ul>
+                      
+                      <div class="card-body">
+                      </div>
+                  </div>`;
+      
+              productCardsContainer.appendChild(card);
+              }
+          });
+      }
+      
+      
+      // Attach the refreshProducts function to the input field's input event
+      const searchInput = document.getElementById("search");
+      searchInput.addEventListener("input", refreshProducts);
+      
+      // Attach the refreshProducts function to the select element's change event
+      const searchCategorySelect = document.getElementById("searchCategory");
+      searchCategorySelect.addEventListener("change", refreshProducts)
+      
+      
+      refreshProducts()
+    </script>
+    
 {% endblock content %}
