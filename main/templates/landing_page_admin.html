@@ -1,5 +1,174 @@
-{% extends 'base.html' %}
+{% extends 'landing_page.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <link rel="stylesheet" href="{% static 'css/landing_page.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{% endblock meta %}
 
 {% block content %}
-    <h1>Admin</h1>
+
+  <main id="" style="padding-top: 50px; display: flex; justify-content: center; flex-direction: column;">
+    
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New Book</button>
+
+    <div class="input-group mb-4">
+      <div class="input-group-append">
+        <select class="custom-select" id="searchCategory">
+            <option value="title">Title</option>
+            <option value="authors">Author</option>
+            <option value="description">Description</option>
+            <option value="categories">Category</option>
+        </select>
+      </div>
+      <input type="text" class="form-control" id="search" placeholder="Search Books">
+    </div>
+
+    
+  <div id="product_cards" class="card-group"></div>
+    
+
+  </main>
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Book</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form id="form" onsubmit="return false;">
+                      {% csrf_token %}
+                      <div class="mb-3">
+                          <label for="title" class="col-form-label">Title:</label>
+                          <input type="text" class="form-control" id="title" name="title"></input>
+                      </div>
+                      <div class="mb-3">
+                          <label for="authors" class="col-form-label">Author:</label>
+                          <input type="text" class="form-control" id="authors" name="authors"></input>
+                      </div>
+                      <div class="mb-3">
+                        <label for="categories" class="col-form-label">Category:</label>
+                        <input type="text" class="form-control" id="categories" name="categories"></input>
+                    </div>
+                    <div class="mb-3">
+                      <label for="thumbnail" class="col-form-label">Image URL:</label>
+                      <textarea class="form-control" id="thumbnail" name="thumbnail"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="col-form-label">Description:</label>
+                        <textarea class="form-control" id="description" name="description"></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <label for="published_year" class="col-form-label">Year Published:</label>
+                      <input type="number" class="form-control" id="published_year" name="published_year"></input>
+                  </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" id="button_add" data-bs-dismiss="modal">Add Book</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script>
+    
+    async function getProducts() {
+      return fetch("{% url 'main:get_books_json' %}").then((res) => res.json())
+    } 
+
+    async function refreshProducts() {
+      const productCardsContainer = document.getElementById("product_cards");
+      productCardsContainer.innerHTML = "";
+      
+      const products = await getProducts();
+      const searchInput = document.getElementById("search");
+      const searchText = searchInput.value.trim().toLowerCase();
+      const searchCategory = document.getElementById("searchCategory").value;
+
+      products.forEach((product) => {
+          const productValue = product.fields[searchCategory].toLowerCase();
+        
+
+        if (productValue.includes(searchText) || (searchText === "")) {
+          const card = document.createElement("div");
+          card.classList.add("col-3");
+
+          card.innerHTML = `
+              <div class="card mb-3 book-card">
+                <img src='${product.fields.thumbnail}' alt="${product.fields.title} cover image" class="book-cover">
+                  <div class="product-information">   
+                    <div class="card-body"> 
+                      <p class="book-title">${product.fields.title}</p>
+                      <p class="book-authors">${product.fields.authors}</p>
+                      <p class="book-text">${truncateDescription(product.fields.description, 100)}</p>
+                    </div>
+                    <div class="review-container">
+                        <div class="d-flex">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <p  class="book-review-count">${product.fields.review_points/product.fields.review_count} | </p>
+                        </div>
+                        <a href="{% url 'main:show_main' %}">See reviews</a>
+                    </div>
+                </div>
+                  <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Year published: ${product.fields.published_year}</li>
+                  </ul>
+                  <div class="card-body">
+                    <button onClick="delete_product_ajax(${product.pk})"class="btn btn-danger">Delete Book</button>
+                  </div>
+              </div>`;
+
+          productCardsContainer.appendChild(card);
+          }
+      });
+      
+      document.getElementById("list-books").innerHTML = htmlString
+    }
+
+    function truncateDescription(description, limit) {
+    if (description.length > limit) {
+        return description.substring(0, limit) + '...';
+    }
+    return description;
+    }
+
+
+    // Attach the refreshProducts function to the input field's input event
+    const searchInput = document.getElementById("search");
+    searchInput.addEventListener("input", refreshProducts);
+
+    // Attach the refreshProducts function to the select element's change event
+    const searchCategorySelect = document.getElementById("searchCategory");
+    searchCategorySelect.addEventListener("change", refreshProducts)
+
+
+    refreshProducts()
+
+    function addProduct() {
+      fetch("{% url 'main:add_book_ajax' %}", {
+          method: "POST",
+          body: new FormData(document.querySelector('#form'))
+      }).then(refreshProducts)
+
+      document.getElementById("form").reset()
+      return false
+    }
+
+    document.getElementById("button_add").onclick = addProduct
+    
+    function delete_product_ajax(ID) {
+      fetch(`remove_book_ajax/${ID}`, {
+          method: 'DELETE',
+      }).then(refreshProducts).then(refreshCard)
+      }
+    document.getElementById("remove-button").onclick = delete_product_ajax
+  </script>
 {% endblock content %}
+

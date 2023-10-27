@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+}
+#list-books{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+.book-card {
+    width: 18rem;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+}
+
+/* Define a CSS class for the book cover image */
+.book-cover {
+    width: 100%; /* Ensure the image width takes the full width of the container */
+    height: 380px; /* Set a fixed height for the image */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 10px; /* Optional: Apply border radius to the image */
+}
+
+.product-box-a{
+    border: none; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);     
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 9 / 18;
+    width: 175px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.product-box-a:hover{
+    border: none; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);     
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 9 / 18;
+    width: 175px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.product-box{
+    width: 100%;
+
+}
+img{
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.product-information{
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.product-information2{
+    height: 50%;
+}
+
+.review-container{
+    height: 50%;
+}
+
+.book-title{
+    font-weight: bold;
+    font-size: large;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* limits the content to a maximum of 2 lines */
+    -webkit-box-orient: vertical;
+}
+.book-authors{
+    font-size: medium;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* limits the content to a maximum of 2 lines */
+    -webkit-box-orient: vertical;
+}
+
+.book-text{
+    font-size: small;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 20; /* limits the content to a maximum of 2 lines */
+    -webkit-box-orient: vertical;
+}
+.book-review-count{
+    font-size: small;
+}
+.books-count{
+    font-size: small;
+    padding-bottom: 10px;
+}
+
+.review-container {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: space-between; /* Horizontal alignment */
+    flex-direction: row;
+}
+
+.review-container p, i{
+    margin-top: 15px;
+    margin-left: 5px;
+}
+i{
+    color: #050A30;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding to control button size */
+    background-color: #1280ee; /* Button background color */
+    color: #fff; /* Text color */
+    border: none; /* Remove the button border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Show a pointer cursor on hover */
+    transition: background-color 0.3s; /* Add a smooth color transition on hover */
+}
+
+/* Style the button on hover */
+.button:hover {
+    background-color: #2581c7; /* Change the background color on hover */
+}
