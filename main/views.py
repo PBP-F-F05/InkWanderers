@@ -1,3 +1,4 @@
+from audioop import reverse
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
@@ -42,6 +43,14 @@ def add_book_ajax(request):
 
         return HttpResponse(b"CREATED", status=201)
     return HttpResponseNotFound()
+
+
+@csrf_exempt
+def remove_book_ajax(request, id):
+    if request.user.role == User.ADMIN:
+        Book.objects.filter(pk=id).delete()
+    return HttpResponseRedirect(reverse("main:show_main"))
+
 
 
 def get_books_json(request):
