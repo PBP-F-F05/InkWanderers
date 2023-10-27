@@ -34,4 +34,18 @@ class History_Book_To_Book(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     books_count = models.PositiveIntegerField(default=0)
 
+from .models import Book, History_Book_To_Book
+from rest_framework import serializers
+
+class BookSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Book
+        fields = '__all__'
+
+class HistoryBookToBookSerializer(serializers.ModelSerializer):
+    book = BookSerializer()
+
+    class Meta:
+        model = History_Book_To_Book
+        fields = '__all__'
 
