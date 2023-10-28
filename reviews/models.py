@@ -8,3 +8,12 @@ class Review(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     rating = models.IntegerField()
     review = models.TextField()
+
+from rest_framework import serializers
+from account.models import BookSerializer
+class ReviewSerializer(serializers.ModelSerializer):
+    book = BookSerializer()
+
+    class Meta:
+        model = Review
+        fields = '__all__'

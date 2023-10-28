@@ -1,24 +1,78 @@
 {% extends 'base.html' %}
+{% block meta %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock meta %}
 {% block content %}
     <h1>My Reviews</h1>
+    <div id="my-reviews"></div>
+    <!-- {% for review in reviews %}
 
-    {% for review in reviews %}
-
-        <div class="card mb-3">
+        <div class="card mb-3" >
             <div class="row g-0">
               <div class="col-md-1">
                 <img src="{{review.book.thumbnail}}" class="img-fluid rounded-start">
                 <div class="card-title"><b>{{review.book.title}}</b></div>
                 <a href="#" class="btn btn-primary">Remove</a>
               </div>
-              <div class="col-md-8">
+              <div class="col-md-8" style="max-height: 300px;">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">My Rating: {{review.rating}}</li>
-                    <li class="list-group-item">{{review.review}}</li>
+                    <li class="list-group-item">
+                        <div class="overflow-auto" style="max-height: 200px;">
+                            {{review.review}}
+                        </div>
+                    </li>
                 </ul>
               </div>
               
             </div>
           </div>
-    {% endfor %}
+    {% endfor %} -->
+    <script>
+        async function getProducts() {
+            return fetch("{% url 'reviews:get_review_json' %}").then((res) => res.json())
+        }
+        async function delete_product(id) {
+            return fetch("{% url 'reviews:remove_review_ajax' }")
+        }
+        async function refreshProducts() {
+            document.getElementById("my-reviews").innerHTML = ""
+            const products = await getProducts()
+            let htmlString = ``
+            products.forEach((review) => {
+                const book = review.book
+                htmlString += `<div class="card mb-3" >
+                <div class="row g-0">
+                <div class="col-md-1">
+                    <img src="${book.thumbnail}" class="img-fluid rounded-start">
+                    <div class="card-title"><b>${book.title}</b></div>
+                    
+                </div>
+                
+                <div class="col-md-8" style="max-height: 300px;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            My Rating: ${review.rating} <i class="fa fa-star" aria-hidden="true"></i>
+
+                        </li>
+                        <li class="list-group-item">
+                            <div class="overflow-auto" style="max-height: 200px;">
+                                ${review.review}
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12">
+                <button id="edit-review" class="btn btn-primary">Edit</a>
+                <button id="remove-review" class="btn btn-danger">Remove</a>
+                </div>
+                </div>
+            </div>` 
+            })
+            
+            document.getElementById("my-reviews").innerHTML = htmlString
+        }
+
+        refreshProducts()
+    </script>
 {% endblock content %}

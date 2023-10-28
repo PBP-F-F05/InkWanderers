@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from reviews.models import Review
+from reviews.models import Review, ReviewSerializer
 from book.models import Book
 # Create your views here.
 from django.http import HttpResponseRedirect
@@ -31,7 +31,7 @@ def add_review(request, id):
         review.save()
         book.save()
         return HttpResponseRedirect(reverse('reviews:show_review', args=[id]))
-    context = {'form': form}
+    context = {'form': form, 'book':book}
     return render(request, "add_review.html", context)
 @login_required
 def show_my_reviews(request):
@@ -49,9 +49,16 @@ def show_json_by_id(request, id):
     data = Review.objects.filter(pk=id)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
-def get_product_json(request):
-    review_item = Review.objects.all()
-    return HttpResponse(serializers.serialize('json', review_item))
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
+
+@api_view(('GET',))
+def get_review_json(request):
+    data = Review.objects.filter(user=request.user)
+    serializer = ReviewSerializer(data, many=True)
+    return Response(data=serializer.data)
+
 @csrf_exempt
 def delete_review_ajax(request, id):
     review = Review.objects.get(pk=id)
