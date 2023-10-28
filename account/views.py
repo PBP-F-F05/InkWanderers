@@ -31,13 +31,11 @@ def register_user(request):
             form.save()
             messages.success(request, 'Your account has been successfully created!')
             return redirect('account:login_user')  # Replace 'ordinary_user_profile' with the actual URL name for the ordinary user profile.
-        else:
-            print("Line 33 views.py account")
 
     else:
         form = SignUpForm()
 
-    return render(request, 'register.html', {'form': form})
+    return render(request, 'register2.html', {'form': form})
 
 def login_user(request):
     if request.method == 'POST':
@@ -88,12 +86,7 @@ def password_change(request):
 def password_change_by_ajax(request):
     if request.method == 'POST':
         form = PasswordChangeForm(user=request.user, data=request.POST)
-        print("Line 91")
-        print(request.POST.get("old_password"))
-        print(request.POST.get("password2"))
-        print(form.is_valid())
         if form.is_valid():
-            print("Line 93")
             user = form.save()
             # Updating the user's session to avoid logging them out
             update_session_auth_hash(request, user)
@@ -113,43 +106,54 @@ def view_books(request):
     }
     return render(request, 'view_books.html', context)
 
-from account.forms import History_Book_Form
-from account.models import History_Book, History_Book_To_Book
+from account.models import Rank_Book, Rank_Book_To_Book,History_Book, History_Book_To_Book
 @login_required
 def add_book(request, id):
     user = request.user
     books = Book.objects.all()
     if request.method == 'GET':
         profile = Profile.objects.get(user=user)  # Use get() to retrieve a single profile
-        # book_id = request.POST.get('book')
         book = Book.objects.filter(id=id)[0]  # Use get() to retrieve a single book
+        rank_book = Rank_Book.objects.filter(profile = profile)[0]
         history_book = History_Book.objects.filter(profile = profile)[0]
-        if(History_Book_To_Book.objects.filter(history_book = history_book, book = book).exists() ):
-            history_book_to_book_user = History_Book_To_Book.objects.filter(history_book = history_book, book = book)[0]
-            history_book_to_book_user.books_count += 1
+        if(Rank_Book_To_Book.objects.filter(rank_book = rank_book, book = book).exists() ):
+            rank_book_to_book_user = Rank_Book_To_Book.objects.filter(rank_book = rank_book, book = book)[0]
+            rank_book_to_book_user.books_count += 1
+            history_book_to_book_user = History_Book_To_Book(history_book = history_book, book = book)
         else:
-            history_book_to_book_user = History_Book_To_Book(history_book = history_book, book = book, books_count = 1)
+            rank_book_to_book_user = Rank_Book_To_Book(rank_book = rank_book, book = book, books_count = 1)
+            history_book_to_book_user = History_Book_To_Book(history_book = history_book, book = book)
+
+        rank_book_to_book_user.save()
         history_book_to_book_user.save()
-        # history_book.books.add(book)
-        # history_book_to_book = History_Book_To_Book(history_book = history_book, book = book)
+
 
     return redirect('account:view_books')
 
+@login_required
+def view_rank_book(request):
+    user = request.user
+    profile = Profile.objects.filter(user = user)[0]
+    rank_book = Rank_Book.objects.filter(profile = profile)[0]
+    rank_book_to_book_by_highest_number = Rank_Book_To_Book.objects.filter(rank_book = rank_book).order_by('-books_count')
+    context={
+        'rank_book_to_book':rank_book_to_book_by_highest_number
+    }
+    return render(request, 'rank_book.html', context)
 @login_required
 def view_history_book(request):
     user = request.user
     profile = Profile.objects.filter(user = user)[0]
     history_book = History_Book.objects.filter(profile = profile)[0]
     history_book_to_book = History_Book_To_Book.objects.filter(history_book = history_book)
-    history_book_to_book_by_highest_number = History_Book_To_Book.objects.filter(history_book = history_book).order_by('-books_count')
     context={
-        'history_book_to_book':history_book_to_book_by_highest_number
+        'history_book_to_book':history_book_to_book
     }
-    return render(request, 'history_book2.html', context)
+    return render(request, 'history_book.html', context)
 
 from django.core import serializers
 from django.http import HttpResponse
-from account.models import HistoryBookToBookSerializer
+from account.models import RankBookToBookSerializer, HistoryBookToBookSerializer
 from rest_framework.response import Response
 
 from rest_framework.decorators import api_view
@@ -157,10 +161,18 @@ from rest_framework.decorators import api_view
 def show_json_by_highest_number(request):
     user = request.user
     profile = Profile.objects.filter(user = user)[0]
+    rank_book = Rank_Book.objects.filter(profile = profile)[0]
+    data = Rank_Book_To_Book.objects.filter(rank_book = rank_book).order_by('-books_count')
+    serializer = RankBookToBookSerializer(data, many=True)
+
+    return Response(data = serializer.data)
+
+@api_view(('GET',))
+def show_json_history_book(request):
+    user = request.user
+    profile = Profile.objects.filter(user = user)[0]
     history_book = History_Book.objects.filter(profile = profile)[0]
-    data = History_Book_To_Book.objects.filter(history_book = history_book).order_by('-books_count')
+    data = History_Book_To_Book.objects.filter(history_book = history_book).order_by('-pk')
     serializer = HistoryBookToBookSerializer(data, many=True)
 
     return Response(data = serializer.data)
-    
-    # return HttpResponse(serializers.serialize("json", data), content_type="application/json")
