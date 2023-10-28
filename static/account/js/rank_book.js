@@ -1,8 +1,8 @@
-async function getHistoryBook() {
-    return fetch("/account/get-history-book-json").then((res) => res.json())
+async function getRankBook() {
+    return fetch("/account/get-rank-book-json").then((res) => res.json())
 }
 async function refreshProducts() {
-    const bookRecords = await getHistoryBook();
+    const bookRecords = await getRankBook();
     let htmlString = ``;
 
     bookRecords.forEach((record) => {
