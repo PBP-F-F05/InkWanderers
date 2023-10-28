@@ -1,23 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    ini adalah daftar buku yang pernah dipinjam
-    {% for history_book in history_book_to_book %}
-    <li>
-            {% csrf_token %}    
-            <ul>
-                <p>{{ history_book.book.title }}</p>
-                <p>{{ history_book.book.authors }}</p>
-                <p>{{history_book.books_count}}</p>
-            </ul>
-            <!-- <input type="hidden" name="book" value="{{ book.id }}"> -->
-            <!-- <button type="submit">Masukkan ke history book</button> -->
-    </li>
-    {% endfor %}
-</body>
-</html>
+    <link rel="stylesheet" href="{% static 'account/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'account/css/history_book.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{% endblock meta %}
+
+{% block content %}
+    <nav id="navbar" >
+        <div id="navbar-center">
+            <a href="{% url 'account:logout_user' %}">Logout</a>
+            <a href="{% url 'account:profile' %}">Profile</a>
+            <a href="{% url 'account:view_books' %}">Lihat buku</a>
+            <a href="{% url 'account:view_history_book' %}">historying Buku Pernah Dipinjam</a>    
+        </div>
+    </nav>
+    <main id="" style="padding-top: 120px; display: flex; justify-content: center; flex-direction: row;">
+        
+
+        
+        <ul id="list-books">
+
+        </ul>
+
+    </main>
+
+    <script src="{% static 'account/js/history_book.js'%}"></script>
+{% endblock content %}
