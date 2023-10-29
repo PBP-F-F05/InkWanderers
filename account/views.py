@@ -9,7 +9,7 @@ from django.contrib.auth import login
 from .models import User
 from django.contrib.auth import authenticate
 from django.contrib import messages  
-from django.http import HttpResponseNotFound, HttpResponseRedirect
+from django.http import HttpResponseNotFound, HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 import datetime
 from django.contrib.auth.decorators import login_required
@@ -30,10 +30,11 @@ def register_user(request):
             user.save()
             form.save()
             messages.success(request, 'Your account has been successfully created!')
-            return redirect('account:login_user')  # Replace 'ordinary_user_profile' with the actual URL name for the ordinary user profile.
+            return JsonResponse({"success": True, "message": "Your account has been successfully created!"})
 
-    else:
-        form = SignUpForm()
+        else:
+            errors = form.errors.as_json()
+            return JsonResponse({"success": False, "errors": errors})
 
     return render(request, 'register2.html', {'form': form})
 
