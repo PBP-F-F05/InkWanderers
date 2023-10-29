@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'collection',
     'reviews',
     'account',
-
+    'bookmarks'
 ]
 
 MIDDLEWARE = [

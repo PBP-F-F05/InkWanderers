@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daftar Buku Bookmark</title>
+</head>
+<body>
+    <h1>Daftar Buku Bookmark</h1>
+    
+    {% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'bookmarks/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'bookmarks/css/view_bookmarks.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{% endblock meta %}
+
+{% block content %}
+    <nav id="navbar" >
+        <div id="navbar-center">
+            <a href="{% url 'account:logout_user' %}">Logout</a>
+            <a href="{% url 'account:profile' %}">Profile</a>
+            <a href="{% url 'account:view_books' %}">Lihat buku</a>
+            <a href="{% url 'account:view_history_book' %}">historying Buku Pernah Dipinjam</a>    
+        </div>
+    </nav>
+    <main id="" style="padding-top: 120px; display: flex; justify-content: center; flex-direction: row;">
+        
+        <ul id="list-books">
+            <a href="" class="product-box-a">
+                <img src='${book.thumbnail}' alt="${book.title} cover image">
+    
+                <div class="product-information">   
+                    <div class="product-information2"> 
+                        <p class="book-title">${book.title}</p>
+                        <p  class="book-authors">${book.authors}</p>
+                    </div>
+                    <div class="review-container">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <p  class="book-review-count">${book.review_count} | </p>
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        <p  class="books-count">${record.books_count}</p>
+                    </div>
+                </div>
+            </a>
+        </ul>
+
+    </main>
+
+    <script src="{% static 'account/js/history_book.js'%}"></script>
+    <ul>
+        {% for book in bookmarked_books %}
+        <li>
+            {{ book.title }} ({{ book.authors }})
+            <a href="{% url 'remove_bookmark' book_id=book.id %}" type="button" class="btn btn-primary remove-bookmark" data-book-id="{{ book.id }}" style="margin:10px">Remove Bookmark</a>
+        </form>
+        </li>
+        {% empty %}
+        <li>Anda belum memiliki buku yang di-bookmark.</li>
+        {% endfor %}
+    </ul>
+    {% endblock content %}
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+     // Fungsi async untuk menghapus bookmark
+     async function removeBookmark(bookId) {
+        try {
+            const response = await fetch(`/bookmarks/remove_bookmark/${bookId}/`, {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": csrftoken,  // Pastikan csrfmiddlewaretoken tersedia
+                    "Content-Type": "application/json",
+                },
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                if (data.success) {
+                    alert(data.message);
+                    // Hapus tombol bookmark setelah berhasil dihapus
+                    $(`[data-book-id="${bookId}"]`).remove();
+                } else {
+                    alert(data.message);
+                }
+            } else {
+                throw new Error('Gagal menghapus bookmark.');
+            }
+        } catch (error) {
+            console.error(error);
+            alert('Terjadi kesalahan dalam melakukan operasi bookmark.');
+        }
+    }
+
+    // Tangani klik pada tombol "Remove Bookmark"
+    $(".remove-bookmark").click(function (event) {
+        event.preventDefault(); // Menghentikan navigasi ke tautan href
+        var bookId = $(this).data("book-id");
+        removeBookmark(bookId);
+    });
+
+</script>
+
+

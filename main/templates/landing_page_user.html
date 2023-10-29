@@ -30,6 +30,8 @@
 
   </main>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script>
         async function getProducts() {
             return fetch("{% url 'main:get_books_json' %}").then((res) => res.json())
@@ -74,7 +76,7 @@
                         </ul>
                         <div class="card-body">
                             <div class="d-flex"> 
-                                <button type="button" class="btn btn-primary" style="margin:10px" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Bookmark</button>
+                                <a href="/bookmarks/bookmark-book/${product.pk}" type="button" class="btn btn-primary" style="margin:10px" >Add to Bookmark</a>
                                 <button type="button" class="btn btn-primary" style="margin:10px" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Collection</button>
                             </div>
                         </div>
@@ -93,7 +95,7 @@
             }
             return description;
         }
-    
+
     
         // Attach the refreshProducts function to the input field's input event
         const searchInput = document.getElementById("search");
@@ -101,11 +103,12 @@
     
         // Attach the refreshProducts function to the select element's change event
         const searchCategorySelect = document.getElementById("searchCategory");
-        searchCategorySelect.addEventListener("change", refreshProducts)
-    
+        searchCategorySelect.addEventListener("change", refreshProducts);
     
         refreshProducts()
       
     </script>
+
+
 
 {% endblock content %}
