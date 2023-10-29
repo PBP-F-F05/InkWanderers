@@ -15,14 +15,12 @@
 {% endblock meta %}
 
 {% block content %}
-    <nav id="navbar" >
-        <div id="navbar-center">
-            <a href="{% url 'account:logout_user' %}">Logout</a>
-            <a href="{% url 'account:profile' %}">Profile</a>
-            <a href="{% url 'main:show_main' %}">Lihat buku</a>
-            <a href="{% url 'account:view_history_book' %}">Riwayat Buku Pernah Dipinjam</a>    
-        </div>
-    </nav>
+<nav id="navbar" >
+    <div id="navbar-center">
+        <a href="{% url 'account:profile' %}">Profile</a> 
+
+    </div>
+</nav>
 
     <div class="input-group mb-4"  style="padding-top: 120px; text-align: center;">
         <div class="input-group-append">

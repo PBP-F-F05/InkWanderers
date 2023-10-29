@@ -14,14 +14,12 @@
 {% endblock meta %}
 
 {% block content %}
-    <nav id="navbar" >
-        <div id="navbar-center">
-            <a href="{% url 'account:logout_user' %}">Logout</a>
-            <a href="{% url 'account:profile' %}">Profile</a>
-            <a href="{% url 'account:view_books' %}">Lihat buku</a>
-            <a href="{% url 'account:view_history_book' %}">historying Buku Pernah Dipinjam</a>   
-        </div>
-    </nav>
+<nav id="navbar" >
+    <div id="navbar-center">
+        <a href="{% url 'account:profile' %}">Profile</a> 
+
+    </div>
+</nav>
     <main id="" style="padding-top: 120px; display: flex; justify-content: center; flex-direction: row;">
         
 

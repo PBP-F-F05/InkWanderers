@@ -59,9 +59,9 @@ def remove_book_from_collection(request, collection_book_id):
     collection_book = CollectionBook.objects.filter(book = book)[0]
 
     if collection_book.collection.owner == owner:
-        collection_book.book.is_borrowed = False
-        collection_book.book.save()
-        collection_book.delete()
-        collection.save()
+        # collection_book.book.is_borrowed = False
+        # collection_book.book.save()
+        # collection_book.delete()
+        # collection.save()
 
-    return redirect('reviews:add_review', collection_book_id)
+        return redirect('reviews:add_review', collection_book_id)
