@@ -14,12 +14,12 @@ body{
     margin: 0px;
 }
 
-#login-center{
+#register-center{
     display: flex;
     justify-content: center;
     flex-direction: row;
 }
-#login-form-center{
+#register-form-center{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,35 +29,36 @@ body{
     border-radius: 10px;
     margin: 20px;
     padding: 20px;
-    height: 500px;
-    width: 70%;
-}
-input{
-    margin-top: 20px;
-    font-size: larger;
+    height: 400px;
     width: 60%;
-    height: 50px;
+}
+input, select{
+    margin-top: 20px;
+    font-size: small;
+    width: 60%;
+    height: 35px;
     background-color: transparent;
 }
-#login-btn{
+#register-btn{
     border: none;
     background-color: #ff5003;
     border-radius: 20px;
     color: white;
 }
-#login-btn:hover{
+#register-btn:hover{
     background-color:  #fd7702;
     cursor: pointer;
 }
 
-#username-field, #password-field{
+#username-field, #password-field, select{
     border: none;
     border-bottom: 1px solid grey; /* Add a 1px solid black bottom border */
     outline: none; /* Remove the focus outline (optional) */
 }
 
-#username-field:focus, #password-field:focus{
+#username-field:focus, #password-field:focus, select:focus{
     border: none;
     border-bottom: 1px solid #ff5003; /* Add a 1px solid black bottom border */
     outline: none; /* Remove the focus outline (optional) */
 }
+

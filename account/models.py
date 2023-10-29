@@ -19,19 +19,49 @@ class User(AbstractUser):
 
 class Profile(models.Model):
       user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
-      following = models.ManyToManyField('self', symmetrical=False, related_name='followers', blank=True, null=True)
       profile_picture_url = models.CharField(max_length=512, default='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png')
-
+      limit_rent = models.IntegerField(default=10)
       def __str__(self):
         return self.user.username
       
+#  Class for book rank
 from book.models import Book
+class Rank_Book(models.Model):
+     profile = models.OneToOneField(Profile, on_delete=models.CASCADE, null=True)
+
+class Rank_Book_To_Book(models.Model):
+    rank_book = models.ForeignKey(Rank_Book, on_delete=models.CASCADE)
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    books_count = models.PositiveIntegerField(default=0)
+
+# Class for history of book of the user
 class History_Book(models.Model):
-     profile = models.OneToOneField(Profile, on_delete=models.SET_NULL, null=True)
+     profile = models.OneToOneField(Profile, on_delete=models.CASCADE, null=True)
 
 class History_Book_To_Book(models.Model):
     history_book = models.ForeignKey(History_Book, on_delete=models.CASCADE)
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
-    books_count = models.PositiveIntegerField(default=0)
+    date_added = models.DateField(auto_now_add=True)
 
+from .models import Book, History_Book_To_Book
+from rest_framework import serializers
+
+class BookSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Book
+        fields = '__all__'
+
+class HistoryBookToBookSerializer(serializers.ModelSerializer):
+    book = BookSerializer()
+
+    class Meta:
+        model = History_Book_To_Book
+        fields = '__all__'
+
+class RankBookToBookSerializer(serializers.ModelSerializer):
+    book = BookSerializer()
+
+    class Meta:
+        model = Rank_Book_To_Book
+        fields = '__all__'
 
