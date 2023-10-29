@@ -22,5 +22,5 @@ urlpatterns = [
     path('api/books/', include(('book.urls'))),
     path('account/', include('account.urls')),
     path('catalogue/', include('main.urls')),
-
+    path('reviews/', include('reviews.urls')),
 ]
