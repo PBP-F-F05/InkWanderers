@@ -1,5 +1,5 @@
 async function getProducts() {
-    return fetch("/catalogue/get_books_json").then((res) => res.json())
+    return fetch("/get_books_json").then((res) => res.json())
 } 
 
 async function refreshProducts() {
