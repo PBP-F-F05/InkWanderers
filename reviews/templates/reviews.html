@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block meta %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock meta %}
+
+{% block content %}
+<div id="rating-points" data-review-points="{{book.review_points}}"></div>
+<div id="rating-count" data-review-count="{{book.review_count}}"></div>
+<div class="row" style="margin: 20px;">
+    <div class="col-4">
+        <div class="card text-center">
+            <img src={{book.thumbnail}} class="card-img-top" style="margin-left: auto;margin-right: auto;">
+            <div class="card-header"><b>{{book.title}}</b></div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Authors: {{book.authors}}</li>
+                <li class="list-group-item">{{book.description}}</li>
+                <li class="list-group-item" id="book-rating"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-8">
+        <h3 style="margin: 20px;">Reviews</h3>
+        <div class="overflow-auto" style="max-height: 1000px;">
+            {% for review in reviews %}
+                <div class="card" style="margin: 20px;">
+                    <div class="card-header">{{review.user.username}}</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Rate: <i class="fa fa-star" aria-hidden="true"></i> {{review.rating}}</li>
+                        <li class="list-group-item">
+                            <div class="overflow-auto" style="max-height: 500px;">
+                                {{review.review}} 
+                            </div>  
+                        </li>
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<script>
+    var review_points = document.getElementById('rating-points').getAttribute('data-review-points');
+    var review_count = document.getElementById('rating-count').getAttribute('data-review-count');
+    var rating = review_points/review_count;
+    document.getElementById('book-rating').innerHTML= `Rating: <i class="fa fa-star" aria-hidden="true"></i> ${rating} `;
+</script>
+{% endblock content %}
