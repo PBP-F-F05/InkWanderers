@@ -1,39 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <style>
-        
-    </style>
-</head>
-<body>
-    <h2>Login</h2>
-    <form method="post" action="">
-        {% csrf_token %}
-        Sign in
-        <div id="login-center">
-            <label for="username">Username or Email:</label>
-            <input autocomplete= "new-password" type="text" id="username" name="username" required>
-            <br>
-            
-            <label for="password">Password:</label>
-            <input autocomplete= "new-password" type="password" id="password" name="password" required>
-            <br>
-            
-            <input autocomplete= "new-password" type="submit" value="Login">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'account/css/login.css' %}">
+
+{% endblock meta %}
+
+
+{% block content %}
+    <div id="login-center">
+        <div id="login-form-center">
+            <h1 style="text-align: center;">Log<span style="color:#ff5003; font-style: italic;"> in</span></h1>
+            <form method="post" action="" style="text-align: center;">
+                {% csrf_token %}
+                    <!-- <label for="username">Username or Email:</label> -->
+                    <input type="text" id="username-field" name="username" required placeholder="Username">
+                    <br>
+                    
+                    <!-- <label for="password">Password:</label> -->
+                    <input type="password" id="password-field" name="password" required placeholder="Password">
+                    <br>
+                    
+                    <input id="login-btn" type="submit" value="Login">
+                    
+                    <br>
+                    {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                        <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                    
+                    <a style="color:  #003f7d;" href="{% url 'account:register_user' %}">Belum punya akun</a>
+            </form>
         </div>
 
-    
-    {% if messages %}
-    <ul>
-        {% for message in messages %}
-            <li>{{ message }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
+    </div>
 
-    <a href="{% url 'account:register_user' %}">Belum punya akun</a>
-</body>
-</html>
+{% endblock content %}

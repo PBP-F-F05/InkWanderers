@@ -1,42 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends "base.html" %}
+{% load static %}
+{% block meta %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>User Registration</title>
-    </head>
-    <body>
-        <h2>Registration</h2>
-        <form method="post" action="{% url 'account:register_user' %}">
+    <link rel="stylesheet" href="{% static 'account/css/register.css' %}">
+{% endblock meta %}
+{% block content %}
+<div  id="register-center">
+   <div id="register-form-center">
+
+       <h1 style="text-align: center;">Sign<span style="color:#ff5003; font-style: italic;"> up</span></h1>
+       <form id="registrationForm" style="text-align: center;" action="{% url 'account:register_user' %}" method="post">
             {% csrf_token %}
-    
-            {{ form.as_p }}  {# This renders the form fields, including the 'role' field #}
-    
-            <input type="submit" value="Register">
-        </form>
-    
-        {% if messages %}
-        <ul>
-            {% for message in messages %}
+            <input type="text" id="username-field" name="username" required placeholder="Username">
+            <br>
+            
+            <input type="password" id="password-field" name="password1" required placeholder="Password">
+            <br>
+            <input type="password" id="password-field" name="password2" required placeholder="Password confirmation">
+            <br>
+
+            <select  name="role" class="form-select" aria-label="Default select example">
+                <option selected >Select roles</option>
+                <option value="1">Admin</option>
+                <option value="2">User</option>
+            </select>
+            <br>
+            <input id="register-btn" type="submit" value="Register">
+            
+            <br>
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
                 <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-    
-        <a href="{% url 'account:login_user' %}">Already have an account? Login</a>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            
+            <a style="color:  #003f7d;" href="{% url 'account:login_user' %}">Sudah punya akun</a>
+       </form>
+   </div> 
+</div>
 
-    </body>
-    </html>
-    
-
-</body>
-</html>
+<script src="{% static 'account/js/register.js'%}"></script>
+{% endblock %}

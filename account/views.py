@@ -24,9 +24,11 @@ def register_user(request):
 
     if request.method == 'POST':
         form = SignUpForm(request.POST)
+        
         if form.is_valid():
             user = form.save(commit=False)
             user.role = request.POST['role']
+            print("line 30 ->",user.role)
             user.save()
             form.save()
             messages.success(request, 'Your account has been successfully created!')
@@ -36,7 +38,7 @@ def register_user(request):
             errors = form.errors.as_json()
             return JsonResponse({"success": False, "errors": errors})
 
-    return render(request, 'register2.html', {'form': form})
+    return render(request, 'register.html', {'form': form})
 
 def login_user(request):
     if request.method == 'POST':
@@ -52,7 +54,7 @@ def login_user(request):
         else:
             messages.info(request, 'Sorry, incorrect username or password. Please try again.')
     context = {}
-    return render(request, 'login2.html', context)
+    return render(request, 'login.html', context)
 
 def logout_user(request):
     logout(request)
@@ -66,7 +68,7 @@ def profile(request):
     context = {
                'profile':profile
                }
-    return render(request, 'profile2.html', context)
+    return render(request, 'profile.html', context)
 
 @login_required
 def password_change(request):
