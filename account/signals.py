@@ -1,6 +1,7 @@
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from .models import User, Profile, Rank_Book, History_Book
+from collection.models import Collection
 
 @receiver(post_save, sender=User)
 def create_user_needs_class(sender, instance, created, **kwargs):
@@ -11,3 +12,6 @@ def create_user_needs_class(sender, instance, created, **kwargs):
         rank_book.save()
         hisotry_book = History_Book(profile = user_profile)
         hisotry_book.save()
+        owner = Profile.objects.filter(user = instance)[0]
+        collection = Collection(owner= owner)
+        collection.save()

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'collection/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'collection/css/my_collection.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{% endblock meta %}
+
+{% block content %}
+    <nav id="navbar" >
+        <div id="navbar-center">
+            <a href="{% url 'account:logout_user' %}">Logout</a>
+            <a href="{% url 'account:profile' %}">Profile</a>
+            <a href="{% url 'account:view_books' %}">Lihat buku</a>
+            <a href="{% url 'account:view_history_book' %}">historying Buku Pernah Dipinjam</a>   
+        </div>
+    </nav>
+    <main id="" style="padding-top: 120px; display: flex; justify-content: center; flex-direction: row;">
+        
+
+        
+        <ul id="list-books">
+            {% for x in collection_book %}
+            <div class="product-box-a">
+                <img src='{{x.book.thumbnail}}' alt="{{x.book.title}} cover image">
+    
+                <div class="product-information">   
+                    <div class="product-information2"> 
+                        <p class="book-title">{{x.book.title}}</p>
+                        <p  class="book-authors">{{x.book.authors}}</p>
+                    </div>
+                    <div class="review-container">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <p  class="book-review-count">{{x.book.review_count}}  </p>
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <a href="{% url 'collection:remove_book_from_collection' collection_book_id=x.book.id %}" class="btn btn-primary" type="button" style="margin:10px">Selesai Baca</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </ul>
+
+    </main>
+
+
+{% endblock content %}
