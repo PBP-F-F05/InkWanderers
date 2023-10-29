@@ -9,7 +9,7 @@ from django.contrib.auth import login
 from .models import User
 from django.contrib.auth import authenticate
 from django.contrib import messages  
-from django.http import HttpResponseNotFound, HttpResponseRedirect
+from django.http import HttpResponseNotFound, HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 import datetime
 from django.contrib.auth.decorators import login_required
@@ -24,18 +24,21 @@ def register_user(request):
 
     if request.method == 'POST':
         form = SignUpForm(request.POST)
+        
         if form.is_valid():
             user = form.save(commit=False)
             user.role = request.POST['role']
+            print("line 30 ->",user.role)
             user.save()
             form.save()
             messages.success(request, 'Your account has been successfully created!')
-            return redirect('account:login_user')  # Replace 'ordinary_user_profile' with the actual URL name for the ordinary user profile.
+            return JsonResponse({"success": True, "message": "Your account has been successfully created!"})
 
-    else:
-        form = SignUpForm()
+        else:
+            errors = form.errors.as_json()
+            return JsonResponse({"success": False, "errors": errors})
 
-    return render(request, 'register2.html', {'form': form})
+    return render(request, 'register.html', {'form': form})
 
 def login_user(request):
     if request.method == 'POST':
@@ -51,7 +54,7 @@ def login_user(request):
         else:
             messages.info(request, 'Sorry, incorrect username or password. Please try again.')
     context = {}
-    return render(request, 'login2.html', context)
+    return render(request, 'login.html', context)
 
 def logout_user(request):
     logout(request)
@@ -65,7 +68,7 @@ def profile(request):
     context = {
                'profile':profile
                }
-    return render(request, 'profile2.html', context)
+    return render(request, 'profile.html', context)
 
 @login_required
 def password_change(request):

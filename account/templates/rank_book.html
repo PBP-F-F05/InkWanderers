@@ -6,8 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
-    <link rel="stylesheet" href="{% static 'css/rank_book.css' %}">
+    <link rel="stylesheet" href="{% static 'account/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'account/css/rank_book.css' %}">
+    <link rel="stylesheet" href="{% static 'account/css/search_bar.css' %}">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 {% endblock meta %}
@@ -18,9 +20,22 @@
             <a href="{% url 'account:logout_user' %}">Logout</a>
             <a href="{% url 'account:profile' %}">Profile</a>
             <a href="{% url 'account:view_books' %}">Lihat buku</a>
-            <a href="{% url 'account:view_rank_book' %}">Ranking Buku Pernah Dipinjam</a>    
+            <a href="{% url 'account:view_history_book' %}">Riwayat Buku Pernah Dipinjam</a>    
         </div>
     </nav>
+
+    <div class="input-group mb-4"  style="padding-top: 120px; text-align: center;">
+        <div class="input-group-append">
+        <select class="custom-select" id="searchCategory">
+            <option value="title">Title</option>
+            <option value="authors">Author</option>
+            <option value="description">Description</option>
+            <option value="categories">Category</option>
+        </select>
+        </div>
+        <input type="text" class="form-control" id="search" placeholder="Search Books">
+    </div>
+
     <main id="" style="padding-top: 120px; display: flex; justify-content: center; flex-direction: row;">
         
 
