@@ -11,9 +11,6 @@ async function refreshProducts() {
     bookRecords.forEach((record) => {
 
         let book = record.book;
-        console.log(book.title);
-        console.log(searchCategory)
-        console.log(book[searchCategory]);
         let totalPoint = book.review_points/book.review_count
 
 
