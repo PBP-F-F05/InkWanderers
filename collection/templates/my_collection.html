@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% load static %}
+{% load mathfilters %}
 
 {% block meta %}
     <meta charset="UTF-8">
@@ -37,7 +38,11 @@
                     </div>
                     <div class="review-container">
                         <i class="fa fa-star" aria-hidden="true"></i>
-                        <p  class="book-review-count">{{x.book.review_count}}  </p>
+                        {% if x.book.review_count == 0 %}
+                        <p  class="book-review-count">0</p>
+                        {% else %}
+                        <p  class="book-review-count"> {{ x.book.review_points|div:x.book.review_count }}</p>
+                        {% endif %} 
                         <i class="fa fa-calendar" aria-hidden="true"></i>
                         <a href="{% url 'collection:remove_book_from_collection' collection_book_id=x.book.id %}" class="btn btn-primary" type="button" style="margin:10px">Selesai Baca</a>
                     </div>
