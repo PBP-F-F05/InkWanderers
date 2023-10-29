@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <h1>Daftar Buku Bookmark</h1>
     {% extends 'base.html' %}
 
 {% load static %}
@@ -29,6 +28,8 @@
         </div>
     </nav>
 
+<h1>Daftar Buku Bookmark</h1>
+
     <main id="" style="padding-top: 120px; display: flex; justify-content: center; flex-direction: row;">
         <ul id="list-books">
             {% for x in bookmarked_books %}
@@ -44,9 +45,8 @@
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <p  class="book-review-count">{{x.review_count}}  </p>
                         <i class="fa fa-calendar" aria-hidden="true"></i>
-                        <a href="{% url 'remove_bookmark' book_id=x.id %}"type="button" class="btn btn-primary" style="margin:10px" >
-                            Remove Bookmark
-                        </a>                    
+                        <a href="{% url 'remove_bookmark' book_id=x.id %}" style="margin:5px" class="btn-like-link">Remove Bookmark</a>
+                    </a>                    
                     </div>
                 </div>
             </div>
