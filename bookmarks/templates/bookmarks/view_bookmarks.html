@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<body>
+    {% extends 'base.html' %}
+
+{% load static %}
+{% load mathfilters %}
+
+{% block meta %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'bookmarks/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'bookmarks/css/view_bookmarks.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'landing_page.css' %}">
+    <link rel="stylesheet" href="{% static 'account/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'account/css/history_book.css' %}">
+
+{% endblock meta %}
+
+{% block content %}
+
+<nav id="navbar" >
+    <div id="navbar-center">
+        <a href="{% url 'account:profile' %}">Profile</a> 
+
+    </div>
+</nav>
+
+<h1>Daftar Buku Bookmark</h1>
+
+    <main id="" style="padding-top: 120px; display: flex; justify-content: center; flex-direction: row;">
+        <ul id="list-books">
+            {% for x in bookmarked_books %}
+            <div id="rating-points" data-review-points="{{x.review_points}}"></div>
+            <div id="rating-count" data-review-count="{{x.review_count}}"></div>
+            <div class="product-box-a">
+                <img src='{{x.thumbnail}}' alt="{{x.title}} cover image">
+    
+                <div class="product-information">   
+                    <div class="product-information2"> 
+                        <p class="book-title">{{x.title}}</p>
+                        <p  class="book-authors">{{x.authors}}</p>
+                    </div>
+                    <div class="review-container">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        {% if x.review_count == 0 %}
+                        <p  class="book-review-count">0</p>
+                        {% else %}
+                        <p  class="book-review-count"> {{ x.review_points|div:x.review_count }}</p>
+                        {% endif %} 
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <a href="{% url 'remove_bookmark' book_id=x.id %}" style="margin:5px" class="btn-like-link">Remove Bookmark</a>
+                    </a>                    
+                    </div>
+                </div>
+            </div>
+            {% endfor %}   
+        </ul>
+    </main>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    // async function getBookJson() {
+    // return fetch("/bookmarks/get-books-json/").then((res) => res.json())
+    // }
+    // async function refreshProducts() {
+    //     const bookRecords = await getBookJson();
+    //     let htmlString = ``;
+
+    //     bookRecords.forEach((record) => {
+    //         const book = record.book;
+    //         console.log("Line 80: -->"+record.date_added);
+    //         htmlString += 
+    //         `
+    //         <a href="" class="product-box-a">
+    //             <img src='${book.thumbnail}' alt="${book.title} cover image">
+
+    //             <div class="product-information">   
+    //                 <div class="product-information2"> 
+    //                     <p class="book-title">${book.title}</p>
+    //                     <p  class="book-authors">${book.authors}</p>
+    //                 </div>
+    //                 <div class="review-container">
+    //                     <i class="fa fa-star" aria-hidden="true"></i>
+    //                     <p  class="book-review-count">${book.review_count} | </p>
+    //                     <i class="fa fa-calendar" aria-hidden="true"></i>
+    //                     <p  class="books-count">${record.date_added}</p>
+    //                 </div>
+    //             </div>
+    //         </a>\n
+            
+    //         `
+    //     })
+        
+    //     document.getElementById("list-books").innerHTML = htmlString
+    // }
+
+    // refreshProducts()
+    // var review_points = document.getElementById('rating-points').getAttribute('data-review-points');
+    // var review_count = document.getElementById('rating-count').getAttribute('data-review-count');
+    // var rating = review_points/review_count;
+    // console.log(rating);
+    // document.getElementById('book-rating').innerHTML= `${rating}`;
+
+</script>
+
+{% endblock content %}
+
+
+

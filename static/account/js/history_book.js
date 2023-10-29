@@ -11,9 +11,8 @@ async function refreshProducts() {
     bookRecords.forEach((record) => {
 
         let book = record.book;
-        console.log(book.title);
-        console.log(searchCategory)
-        console.log(book[searchCategory]);
+        let totalPoint = book.review_points/book.review_count
+
 
         const productValue = book[searchCategory].toLowerCase();
         if (productValue.includes(searchText) || (searchText === "")) {
@@ -29,7 +28,7 @@ async function refreshProducts() {
                     </div>
                     <div class="review-container">
                         <i class="fa fa-star" aria-hidden="true"></i>
-                        <p  class="book-review-count">${book.review_count} | </p>
+                        <p  class="book-review-count">${totalPoint} | </p>
                         <i class="fa fa-book" aria-hidden="true"></i>
                         <p  class="books-count">${record.date_added}</p>
                     </div>

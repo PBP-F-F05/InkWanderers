@@ -1,11 +1,13 @@
 from audioop import reverse
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
 from account.models import User
 from book.models import Book
+from bookmarks.models import BookmarkList
+from account.models import Profile
 
 @login_required(login_url='account/login')
 def show_main(request):

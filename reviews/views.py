@@ -9,6 +9,8 @@ from django.http import HttpResponse
 from django.core import serializers
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
+from collection.models import CollectionBook, Collection
+from account.models import Profile
 @login_required
 def show_review(request, id):
     book = Book.objects.get(pk=id)
@@ -21,16 +23,25 @@ def show_review(request, id):
 @login_required
 def add_review(request, id):
     form = ProductForm(request.POST or None)
+    profile = Profile.objects.filter(user=request.user)[0]
     book = Book.objects.get(pk = id)
-    if form.is_valid() and request.method == "POST":
-        review = form.save(commit=False)
-        review.user = request.user
-        review.book = book
-        book.review_count+=1
-        book.review_points+=review.rating
-        review.save()
-        book.save()
-        return HttpResponseRedirect(reverse('reviews:show_review', args=[id]))
+    collection = Collection.objects.filter(owner=profile)[0]
+    if CollectionBook.objects.filter(book = book, collection = collection).exists():
+        if form.is_valid() and request.method == "POST":
+            collection = Collection.objects.filter(owner = profile)[0]
+            collection_book = CollectionBook.objects.filter(book = book)[0]
+            collection_book.book.is_borrowed = False
+            review = form.save(commit=False)
+            review.user = request.user
+            review.book = book
+            collection_book.book.review_count+=1
+            collection_book.book.review_points+=review.rating
+            collection_book.book.save()
+            collection_book.delete()
+            collection.save()
+            review.save()
+            # book.save()
+            return HttpResponseRedirect(reverse('reviews:show_review', args=[id]))
     context = {'form': form, 'book':book}
     return render(request, "add_review.html", context)
 @login_required
