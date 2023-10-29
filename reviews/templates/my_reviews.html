@@ -4,7 +4,49 @@
 {% endblock meta %}
 {% block content %}
     <h1>My Reviews</h1>
+    <!-- <div class="category-container">
+        <label for="name" class="col-form-label">Filter</label>
+            <select id="filter-review" class="form-select" name="filter" aria-label="Default select example">
+                <option value="author">Authors</option>
+                <option value="category">Category</option>
+                <option value="year">Year Published</option>
+            </select>
+    </div> -->
     <div id="my-reviews"></div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Review</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form" onsubmit="return false;">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="name" class="col-form-label">Rating:</label>
+                            <select class="form-select" name="rating" aria-label="Default select example">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="col-form-label">Review:</label>
+                            <textarea class="form-control" id="description" name="review"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="editButtonListener()" id="button_edit" data-bs-dismiss="modal">Edit Review</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- {% for review in reviews %}
 
         <div class="card mb-3" >
@@ -29,15 +71,30 @@
           </div>
     {% endfor %} -->
     <script>
-        async function getProducts() {
+        async function getReviews() {
             return fetch("{% url 'reviews:get_review_json' %}").then((res) => res.json())
         }
-        async function delete_product(id) {
-            return fetch("{% url 'reviews:remove_review_ajax' }")
+        function editReview(ID) {
+            return fetch(`edit_review_ajax/${ID}/`, {
+                method:"POST",
+                body: new FormData(document.querySelector('#form'))
+            }).then(function () {
+                document.getElementById("form").reset()
+                return false
+            }).then(refreshReviews)
+
+            
         }
-        async function refreshProducts() {
+        // document.getElementById("filter-review").addEventListener("change", function() {
+        //     refreshReviews(); 
+        // });
+        async function refreshReviews() {
             document.getElementById("my-reviews").innerHTML = ""
-            const products = await getProducts()
+            const products = await getReviews()
+        //     const filteredReviews = products.filter(review => {
+        // // If no category is selected or the review's category matches the selected category
+        //         return !selectedFilter || products.book.category === selectedFilter;
+        //     });
             let htmlString = ``
             products.forEach((review) => {
                 const book = review.book
@@ -62,9 +119,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-12">
-                <button id="edit-review" class="btn btn-primary">Edit</a>
-                <button id="remove-review" class="btn btn-danger">Remove</a>
+                <div class="col-8">
+                <button id="edit-review" data-bs-toggle="modal" onclick="dataFunc(${review.id})" data-bs-target="#exampleModal" class="btn btn-primary">Edit</a>
                 </div>
                 </div>
             </div>` 
@@ -72,7 +128,14 @@
             
             document.getElementById("my-reviews").innerHTML = htmlString
         }
-
-        refreshProducts()
+        function dataFunc(id) {
+            document.getElementById("button_edit").setAttribute('data-review-id', id)
+        }
+        function editButtonListener() {
+            id = document.getElementById("button_edit").getAttribute('data-review-id')
+            editReview(id)
+        }
+        refreshReviews()
+        
     </script>
 {% endblock content %}

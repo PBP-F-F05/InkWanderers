@@ -2,7 +2,7 @@ from django.shortcuts import render
 from reviews.models import Review, ReviewSerializer
 from book.models import Book
 # Create your views here.
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponseNotFound
 from reviews.forms import ProductForm
 from django.urls import reverse
 from django.http import HttpResponse
@@ -36,8 +36,10 @@ def add_review(request, id):
 @login_required
 def show_my_reviews(request):
     reviews = Review.objects.filter(user=request.user)
+    book = Book.objects.all()
     context = {
-        'reviews':reviews
+        'reviews':reviews,
+        'book':book
     }
     return render(request, 'my_reviews.html', context)
 
@@ -60,7 +62,17 @@ def get_review_json(request):
     return Response(data=serializer.data)
 
 @csrf_exempt
-def delete_review_ajax(request, id):
-    review = Review.objects.get(pk=id)
-    review.delete()
-    return HttpResponse(status=204)
+def edit_review_ajax(request, id):
+    if request.method == "POST":
+        review = Review.objects.get(pk=id)
+        book = Book.objects.get(pk=review.book.pk)
+        rating = request.POST.get("rating")
+        reviewText = request.POST.get("review")
+        book.review_points -= review.rating
+        book.review_points += int(rating)
+        review.rating = int(rating)
+        review.review = reviewText
+        review.save()
+        book.save()
+        return HttpResponse(status=200)
+    return HttpResponseNotFound()

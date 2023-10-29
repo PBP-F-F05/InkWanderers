@@ -1,5 +1,5 @@
 from django.urls import path
-from reviews.views import show_review, add_review, show_my_reviews, show_json, show_json_by_id, delete_review_ajax, get_review_json
+from reviews.views import show_review, add_review, show_my_reviews, show_json, show_json_by_id, edit_review_ajax, get_review_json
 
 
 app_name = 'reviews'
@@ -10,6 +10,6 @@ urlpatterns = [
     path('my-reviews/', show_my_reviews, name="my_reviews"),
     path('json/', show_json, name='show_json'),
     path('json/<int:id>/', show_json_by_id, name='show_json_by_id'), 
-    path('delete-review-ajax/', delete_review_ajax, name='remove_review_ajax'),
+    path('my-reviews/edit_review_ajax/<int:id>/', edit_review_ajax, name='edit_review_ajax'),
     path('get-review/', get_review_json, name='get_review_json')
 ]
