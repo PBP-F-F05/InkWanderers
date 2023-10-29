@@ -7,3 +7,4 @@ urllib3
 djangorestframework
 django-environ
 django-mathfilters
+whitenoise
