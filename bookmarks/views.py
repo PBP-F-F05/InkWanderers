@@ -5,6 +5,9 @@ from django.contrib.auth.decorators import login_required
 from .models import BookmarkList
 from book.models import Book
 from account.models import Profile
+from django.core import serializers
+from account.models import User
+
 
 @login_required
 def view_bookmarks(request):
@@ -27,13 +30,10 @@ def bookmark_book(request, book_id):
 
         if book not in bookmark_list.bookmarked_books.all():
             bookmark_list.bookmarked_books.add(book)
-            messages.success(request, 'Buku telah ditandai sebagai bookmark.')
-        else:
-            messages.info(request, 'Buku sudah ditandai sebagai bookmark sebelumnya.')
-
+            # messages.success(request, 'Buku telah ditandai sebagai bookmark.')
         return redirect('main:show_main')
     except Book.DoesNotExist:
-        messages.error(request, 'Buku tidak ditemukan.')
+        # messages.error(request, 'Buku tidak ditemukan.')
         return redirect('main:show_main')
 
 @login_required
@@ -45,14 +45,27 @@ def remove_bookmark(request, book_id):
 
         if book in bookmark_list.bookmarked_books.all():
             bookmark_list.bookmarked_books.remove(book)
-            messages.success(request, 'Buku telah dihapus dari bookmark.')
-        else:
-            messages.info(request, 'Buku tidak ditemukan di bookmark.')
+        #     messages.success(request, 'Buku telah dihapus dari bookmark.')
+        # else:
+        #     messages.info(request, 'Buku tidak ditemukan di bookmark.')
 
         return redirect('view_bookmarks')
     except Book.DoesNotExist:
-        messages.error(request, 'Buku tidak ditemukan.')
+        # messages.error(request, 'Buku tidak ditemukan.')
         return redirect('view_bookmarks')
+
+from rest_framework.decorators import api_view
+
+@api_view(('GET',))
+def get_books_json(request):     
+    user = Profile.objects.get(user=request.user)[0]
+    books = BookmarkList.objects.filter(user=user)
+    data = BookmarkList.objects.filter(bookmarked_books=books).order_by('-pk')
+    
+    serializer = HistoryBookToBookSerializer(data, many=True)
+
+
+    return HttpResponse(serializers.serialize('json', books))
     
 
 
