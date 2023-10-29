@@ -4,69 +4,64 @@ from .models import Collection, CollectionBook
 from book.models import Book
 from account.models import Profile
 from django.contrib.auth.decorators import login_required
-
-@login_required
-def create_collection(request):
-    if request.method == 'POST':
-        name = request.POST.get('name')
-        owner = Profile.objects.get(user=request.user)
-
-        # Maksimal 10 buku dalam koleksi
-        if Collection.objects.filter(owner=owner).count() >= 10:
-            messages.error(request, 'Anda telah mencapai batas maksimal koleksi.')
-        else:
-            collection = Collection(name=name, owner=owner)
-            collection.save()
-            messages.success(request, 'Koleksi berhasil dibuat.')
-
-        return redirect('collection:my_collections')
-    return render(request, 'create_collection.html')
+from account.models import Rank_Book, Rank_Book_To_Book, History_Book, History_Book_To_Book
 
 @login_required
 def my_collections(request):
     owner = Profile.objects.get(user=request.user)
-    collections = Collection.objects.filter(owner=owner)
+    collection = Collection.objects.filter(owner=owner)[0]
+    collection_book = CollectionBook.objects.filter(collection = collection)
     context = {
-        'collections': collections,
+        'collection_book': collection_book,
     }
-    return render(request, 'my_collections.html', context)
+    return render(request, 'my_collection.html', context)
 
 @login_required
-def add_book_to_collection(request, collection_id, book_id):
-    collection = Collection.objects.get(pk=collection_id)
-    book = Book.objects.get(pk=book_id)
-    owner = Profile.objects.get(user=request.user)
+def add_book_to_collection(request, book_id):
+    
+    book = Book.objects.filter(pk=book_id)[0]
+    owner = Profile.objects.filter(user=request.user)[0]
+    collection = Collection.objects.filter(owner=owner)[0]
+    
 
     # Maksimal 10 buku dalam satu koleksi
     if CollectionBook.objects.filter(collection=collection).count() >= 10:
         messages.error(request, 'Koleksi ini telah mencapai batas maksimal.')
     else:
-        collection_book, created = CollectionBook.objects.get_or_create(collection=collection, book=book)
+        book.is_borrowed = True
+        book.save()
+        rank_book = Rank_Book.objects.filter(profile = owner)[0]
+        history_book = History_Book.objects.filter(profile = owner)[0]
+        if(Rank_Book_To_Book.objects.filter(rank_book = rank_book, book = book).exists() ):
+            rank_book_to_book_user = Rank_Book_To_Book.objects.filter(rank_book = rank_book, book = book)[0]
+            rank_book_to_book_user.books_count += 1
+            history_book_to_book_user = History_Book_To_Book(history_book = history_book, book = book)
+        else:
+            rank_book_to_book_user = Rank_Book_To_Book(rank_book = rank_book, book = book, books_count = 1)
+            history_book_to_book_user = History_Book_To_Book(history_book = history_book, book = book)
 
-        # Jika buku berhasil ditambahkan ke koleksi, tandai buku sebagai "is_borrowed" False
-        if created:
-            book.is_borrowed = False
-            book.save()
-            messages.success(request, 'Buku berhasil ditambahkan ke koleksi.')
+        collection = Collection.objects.filter(owner=owner)[0]
+        collection_book = CollectionBook(collection=collection, book=book)
+        collection.save()
+        collection_book.save()
+        rank_book_to_book_user.save()
+        history_book_to_book_user.save()
 
-    return redirect('collection:my_collections')
+
+    return redirect('main:show_main')
 
 @login_required
-def remove_book_from_collection(request, collection_id, collection_book_id):
-    collection = Collection.objects.get(pk=collection_id)
-    owner = Profile.objects.get(user=request.user)
-    collection_book = CollectionBook.objects.get(pk=collection_book_id)
+def remove_book_from_collection(request, collection_book_id):
+
+    owner = Profile.objects.get(user = request.user)
+    collection = Collection.objects.filter(owner = owner)[0]
+    book = Book.objects.filter(id = collection_book_id)[0]
+    collection_book = CollectionBook.objects.filter(book = book)[0]
 
     if collection_book.collection.owner == owner:
+        collection_book.book.is_borrowed = False
+        collection_book.book.save()
         collection_book.delete()
+        collection.save()
 
-        # Tandai buku sebagai "is_borrowed" True jika tidak ada lagi di koleksi
-        if not CollectionBook.objects.filter(book=collection_book.book).exists():
-            collection_book.book.is_borrowed = True
-            collection_book.book.save()
-
-        messages.success(request, 'Buku berhasil dihapus dari koleksi.')
-    else:
-        messages.error(request, 'Anda tidak memiliki izin untuk menghapus buku dari koleksi ini.')
-
-    return redirect('collection:my_collections')
+    return redirect('reviews:add_review', collection_book_id)
