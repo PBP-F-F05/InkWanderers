@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'reviews',
     'account',
     'bookmarks',
-    'mathfilters'
+    'mathfilters',
+    'authentication'
 ]
 
 MIDDLEWARE = [
@@ -153,3 +154,12 @@ mimetypes.add_type("text/css", ".css", True)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SAMESITE = 'None'
+
+# CSRF_TRUSTED_ORIGINS =["http://127.0.0.1:8000/"]
