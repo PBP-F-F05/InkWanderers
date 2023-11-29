@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'account',
     'bookmarks',
     'mathfilters',
-    'authentication'
+    'authentication',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -58,7 +59,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
+
 ]
 
 ROOT_URLCONF = 'InkWanderers.urls'
@@ -163,3 +166,4 @@ CSRF_COOKIE_SAMESITE = 'None'
 SESSION_COOKIE_SAMESITE = 'None'
 
 # CSRF_TRUSTED_ORIGINS =["http://127.0.0.1:8000/"]
+
