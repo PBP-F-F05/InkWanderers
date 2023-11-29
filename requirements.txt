@@ -8,3 +8,4 @@ djangorestframework
 django-environ
 django-mathfilters
 whitenoise
+django-cors-headers
