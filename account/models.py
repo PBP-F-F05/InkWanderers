@@ -43,8 +43,22 @@ class History_Book_To_Book(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     date_added = models.DateField(auto_now_add=True)
 
+
+# === Flutter Serializer ===
 from .models import Book, History_Book_To_Book
 from rest_framework import serializers
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = '__all__'
+
+class ProfileSerializer(serializers.ModelSerializer):
+    user = UserSerializer()
+
+    class Meta:
+        model = Profile
+        fields = '__all__'
 
 class BookSerializer(serializers.ModelSerializer):
     class Meta:

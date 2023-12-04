@@ -15,7 +15,7 @@ import datetime
 from django.contrib.auth.decorators import login_required
 from account.forms import SignUpForm
 from django.contrib.auth import logout
-from account.models import User, Profile
+from account.models import *
 from django.contrib.auth import update_session_auth_hash
 
 # Create your views here.
@@ -179,3 +179,10 @@ def show_json_history_book(request):
     serializer = HistoryBookToBookSerializer(data, many=True)
 
     return Response(data = serializer.data)
+
+@login_required
+def show_json_profile(request):
+    user = request.user
+    profile = Profile.objects.filter(user = user)[0]
+    serializers = ProfileSerializer(profile, many=True)
+    return Response(data=serializers.data)
