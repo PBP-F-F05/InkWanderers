@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 from django.db import models
 
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 
 from django.contrib.auth.models import AbstractUser, Permission
 class User(AbstractUser):
@@ -47,6 +47,7 @@ class History_Book_To_Book(models.Model):
 # === Flutter Serializer ===
 from .models import Book, History_Book_To_Book
 from rest_framework import serializers
+
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:

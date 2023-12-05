@@ -180,9 +180,16 @@ def show_json_history_book(request):
 
     return Response(data = serializer.data)
 
-@login_required
+@api_view(('GET',))
 def show_json_profile(request):
     user = request.user
     profile = Profile.objects.filter(user = user)[0]
-    serializers = ProfileSerializer(profile, many=True)
+    serializers = ProfileSerializer(profile)
+    return Response(data=serializers.data)
+
+@api_view(('GET',))
+def show_json_user(request):
+    user = request.user
+    # profile = Profile.objects.filter(user = user)[0]
+    serializers = UserSerializer(user)
     return Response(data=serializers.data)

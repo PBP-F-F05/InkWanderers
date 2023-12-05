@@ -25,5 +25,6 @@ urlpatterns = [
     path('get-rank-book-json/', views.show_json_by_highest_number, name='get_rank_book_json'),
     path('get-history-book-json/', views.show_json_history_book, name='get_history_book_json'),
     path('get-profile-json/', views.show_json_profile, name='get_profile_json'),
+    path('get-user-json/', views.show_json_user, name='show_json_user'),
 
 ]
