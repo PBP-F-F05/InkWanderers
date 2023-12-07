@@ -26,7 +26,7 @@ urlpatterns = [
     path('get-history-book-json/', views.show_json_history_book, name='get_history_book_json'),
     path('get-profile-json/', views.show_json_profile, name='get_profile_json'),
     path('get-user-json/', views.show_json_user, name='show_json_user'),
-    path('logout_flutter/', views.logout_user_flutter, name='logout_user'),
+    path('logout_flutter/', views.logout_user_flutter, name='logout_user_flutter'),
 
 
 
