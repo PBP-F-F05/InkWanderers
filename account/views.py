@@ -157,10 +157,10 @@ def view_history_book(request):
 from django.core import serializers
 from django.http import HttpResponse
 from account.models import RankBookToBookSerializer, HistoryBookToBookSerializer
-from rest_framework.response import Response
+# from rest_framework.response import Response
 
-from rest_framework.decorators import api_view
-@api_view(('GET',))
+# from rest_framework.decorators import api_view
+# @api_view(('GET',))
 def show_json_by_highest_number(request):
     user = request.user
     profile = Profile.objects.filter(user = user)[0]
@@ -170,7 +170,7 @@ def show_json_by_highest_number(request):
 
     return Response(data = serializer.data)
 
-@api_view(('GET',))
+# @api_view(('GET',))
 def show_json_history_book(request):
     user = request.user
     profile = Profile.objects.filter(user = user)[0]
@@ -179,17 +179,25 @@ def show_json_history_book(request):
     serializer = HistoryBookToBookSerializer(data, many=True)
 
     return Response(data = serializer.data)
+from django.views.decorators.csrf import csrf_exempt
 
-@api_view(('GET',))
+# @api_view(('GET',))
+@csrf_exempt
+@login_required
 def show_json_profile(request):
     user = request.user
-    profile = Profile.objects.filter(user = user)[0]
+    profile = Profile.objects.filter(user=user).first()
     serializers = ProfileSerializer(profile)
-    return Response(data=serializers.data)
+    return JsonResponse(data=serializers.data)
 
-@api_view(('GET',))
+
+@login_required
+@csrf_exempt
 def show_json_user(request):
+    print("Line 187")
+    print(request)
     user = request.user
+    print("Line 192 "+user)
     # profile = Profile.objects.filter(user = user)[0]
     serializers = UserSerializer(user)
-    return Response(data=serializers.data)
+    return JsonResponse(data=serializers.data)
