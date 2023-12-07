@@ -3,6 +3,8 @@ from django.dispatch import receiver
 from .models import User, Profile, Rank_Book, History_Book
 from collection.models import Collection
 from bookmarks.models import BookmarkList
+from django.contrib.auth.models import User
+from rest_framework.authtoken.models import Token
 
 @receiver(post_save, sender=User)
 def create_user_needs_class(sender, instance, created, **kwargs):

@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
+    # 'rest_framework',
     'book',
     'main',
     'collection',
@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'bookmarks',
     'mathfilters',
     'authentication',
-    'corsheaders'
+    'corsheaders',
+    # 'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -63,6 +64,12 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware'
 
 ]
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': [
+#         'rest_framework.authentication.TokenAuthentication',
+#     ],
+# }
 
 ROOT_URLCONF = 'InkWanderers.urls'
 
@@ -156,7 +163,7 @@ mimetypes.add_type("text/javascript", ".js", True)
 mimetypes.add_type("text/css", ".css", True)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
@@ -165,5 +172,5 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = 'None'
 SESSION_COOKIE_SAMESITE = 'None'
 
-CSRF_TRUSTED_ORIGINS =["https://inkwanderers-f05-tk.pbp.cs.ui.ac.id"]
+CSRF_TRUSTED_ORIGINS =["https://inkwanderers-f05-tk.pbp.cs.ui.ac.id", "https://inkwanderers.my.id", "http://localhost:8000"]
 

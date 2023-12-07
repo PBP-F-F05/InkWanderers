@@ -15,7 +15,7 @@ import datetime
 from django.contrib.auth.decorators import login_required
 from account.forms import SignUpForm
 from django.contrib.auth import logout
-from account.models import User, Profile
+from account.models import *
 from django.contrib.auth import update_session_auth_hash
 
 # Create your views here.
@@ -157,10 +157,10 @@ def view_history_book(request):
 from django.core import serializers
 from django.http import HttpResponse
 from account.models import RankBookToBookSerializer, HistoryBookToBookSerializer
-from rest_framework.response import Response
+# from rest_framework.response import Response
 
-from rest_framework.decorators import api_view
-@api_view(('GET',))
+# from rest_framework.decorators import api_view
+# @api_view(('GET',))
 def show_json_by_highest_number(request):
     user = request.user
     profile = Profile.objects.filter(user = user)[0]
@@ -170,7 +170,7 @@ def show_json_by_highest_number(request):
 
     return Response(data = serializer.data)
 
-@api_view(('GET',))
+# @api_view(('GET',))
 def show_json_history_book(request):
     user = request.user
     profile = Profile.objects.filter(user = user)[0]
@@ -179,3 +179,34 @@ def show_json_history_book(request):
     serializer = HistoryBookToBookSerializer(data, many=True)
 
     return Response(data = serializer.data)
+from django.views.decorators.csrf import csrf_exempt
+
+# @api_view(('GET',))
+@csrf_exempt
+@login_required
+def show_json_profile(request):
+    user = request.user
+    profile = Profile.objects.filter(user=user).first()
+    serializers = ProfileSerializer(profile)
+    return JsonResponse(data=serializers.data)
+
+
+@login_required
+@csrf_exempt
+def show_json_user(request):
+    print("Line 187")
+    print(request)
+    user = request.user
+    print("Line 192 "+user)
+    # profile = Profile.objects.filter(user = user)[0]
+    serializers = UserSerializer(user)
+    return JsonResponse(data=serializers.data)
+
+@login_required
+@csrf_exempt
+def logout_user_flutter(request):
+    user = request.user
+    profile = Profile.objects.filter(user=user).first()
+    serializers = ProfileSerializer(profile)
+    logout(request)
+    return JsonResponse(data=serializers.data)  
