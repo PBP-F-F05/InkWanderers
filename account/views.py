@@ -201,3 +201,12 @@ def show_json_user(request):
     # profile = Profile.objects.filter(user = user)[0]
     serializers = UserSerializer(user)
     return JsonResponse(data=serializers.data)
+
+@login_required
+@csrf_exempt
+def logout_user_flutter(request):
+    user = request.user
+    profile = Profile.objects.filter(user=user).first()
+    serializers = ProfileSerializer(profile)
+    logout(request)
+    return JsonResponse(data=serializers.data)  
