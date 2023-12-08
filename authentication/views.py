@@ -68,6 +68,7 @@ def register(request):
         role = request.POST['role']
         # Check if user already exists
         if User.objects.filter(username=username).exists():
+            print("Line 71")
             return JsonResponse({
                 "status": False,
                 "message": "Register gagal, username sudah digunakan."
@@ -86,6 +87,7 @@ def register(request):
         }, status=201)
 
     else:
+        print("Line 90")
         return JsonResponse({
             "status": False,
             "message": "Invalid request"
