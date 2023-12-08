@@ -65,7 +65,7 @@ def register(request):
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']
-
+        role = request.POST['role']
         # Check if user already exists
         if User.objects.filter(username=username).exists():
             return JsonResponse({
@@ -75,6 +75,8 @@ def register(request):
 
         # Create new user
         user = User.objects.create_user(username=username, password=password)
+        user.role = role
+
         user.save()
 
         return JsonResponse({
