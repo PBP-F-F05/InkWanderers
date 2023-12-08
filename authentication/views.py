@@ -75,11 +75,11 @@ def register(request):
             }, status=400)
 
         # Create new user
-        user = User.objects.create_user(username=username, password=password)
+        user = User(username=username)
+        user.set_password(password)
         user.role = role
-
-        user.save()
-
+        user.save() 
+        
         return JsonResponse({
             "username": user.username,
             "status": True,
