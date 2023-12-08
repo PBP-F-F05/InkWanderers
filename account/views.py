@@ -157,10 +157,10 @@ def view_history_book(request):
 from django.core import serializers
 from django.http import HttpResponse
 from account.models import RankBookToBookSerializer, HistoryBookToBookSerializer
-# from rest_framework.response import Response
+from rest_framework.response import Response
 
-# from rest_framework.decorators import api_view
-# @api_view(('GET',))
+from rest_framework.decorators import api_view
+@api_view(('GET',))
 def show_json_by_highest_number(request):
     user = request.user
     profile = Profile.objects.filter(user = user)[0]
@@ -170,7 +170,7 @@ def show_json_by_highest_number(request):
 
     return Response(data = serializer.data)
 
-# @api_view(('GET',))
+@api_view(('GET',))
 def show_json_history_book(request):
     user = request.user
     profile = Profile.objects.filter(user = user)[0]
