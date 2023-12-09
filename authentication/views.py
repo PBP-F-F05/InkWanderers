@@ -71,7 +71,7 @@ def register(request):
             return JsonResponse({
                 "status": False,
                 "message": "Register gagal, username sudah digunakan."
-            }, status=400)
+            }, status=500)
 
         # Create new user
         user = User(username=username)

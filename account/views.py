@@ -28,7 +28,6 @@ def register_user(request):
         if form.is_valid():
             user = form.save(commit=False)
             user.role = request.POST['role']
-            print("line 30 ->",user.role)
             user.save()
             form.save()
             messages.success(request, 'Your account has been successfully created!')
@@ -194,10 +193,7 @@ def show_json_profile(request):
 @login_required
 @csrf_exempt
 def show_json_user(request):
-    print("Line 187")
-    print(request)
     user = request.user
-    print("Line 192 "+user)
     # profile = Profile.objects.filter(user = user)[0]
     serializers = UserSerializer(user)
     return JsonResponse(data=serializers.data)
@@ -210,3 +206,40 @@ def logout_user_flutter(request):
     serializers = ProfileSerializer(profile)
     logout(request)
     return JsonResponse(data=serializers.data)  
+
+import json
+from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth import update_session_auth_hash
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required
+
+@login_required
+@csrf_exempt
+def change_password_flutter(request):
+    if request.method == 'POST':
+        try:
+            form = PasswordChangeForm(user=request.user, data=request.POST)
+            if form.is_valid():
+                user = form.save()
+                update_session_auth_hash(request, user)  # Important to keep the user logged in
+                return JsonResponse({
+                    "status": True,
+                    "message": "Password successfully updated."
+                }, status=200)
+            else:
+                return JsonResponse({
+                    "status": False,
+                    "message": "Password update failed. Form is invalid.",
+                    "errors": form.errors.as_json()  # This will help you debug form errors
+                }, status=400)
+        except json.JSONDecodeError:
+            return JsonResponse({
+                "status": False,
+                "message": "Invalid JSON data."
+            }, status=400)
+    else:
+        return JsonResponse({
+            "status": False,
+            "message": "Invalid request method."
+        }, status=405)
