@@ -54,7 +54,7 @@ def remove_book_ajax(request, id):
     return HttpResponseRedirect(reverse("main:show_main"))
 
 
-
+@csrf_exempt
 def get_books_json(request):
     if request.user.role == User.ADMIN:
         books = Book.objects.all()
