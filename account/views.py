@@ -155,7 +155,7 @@ def view_history_book(request):
 
 from django.core import serializers
 from django.http import HttpResponse
-from account.models import RankBookToBookSerializer, HistoryBookToBookSerializer
+from account.models import RankBookToBookSerializer, HistoryBookToBookSerializer, BookSerializer
 from rest_framework.response import Response
 
 from rest_framework.decorators import api_view
@@ -178,6 +178,32 @@ def show_json_history_book(request):
     serializer = HistoryBookToBookSerializer(data, many=True)
 
     return Response(data = serializer.data)
+    
+def show_json_by_highest_number_flutter(request):
+    user = request.user
+    profile = Profile.objects.filter(user = user)[0]
+    rank_book = Rank_Book.objects.filter(profile = profile)[0]
+    data = Rank_Book_To_Book.objects.filter(rank_book = rank_book).order_by('-books_count')
+    serializer = RankBookToBookSerializer(data, many=True)
+
+    return JsonResponse(data = serializer.data)
+
+@api_view(('GET',))
+def show_json_history_book_flutter(request):
+    user = request.user
+    profile = Profile.objects.filter(user = user)[0]
+    history_book = History_Book.objects.filter(profile = profile)[0]
+    data = History_Book_To_Book.objects.filter(history_book = history_book).order_by('-pk')
+    serializer = HistoryBookToBookSerializer(data, many=True)
+
+    return JsonResponse(data=serializer.data, safe=False)
+    
+def view_book_json_flutter(request):
+    data = Book.objects.all()
+    serializers = BookSerializer(data, many = True)
+    return JsonResponse(data=serializers.data, safe=False)
+
+    
 from django.views.decorators.csrf import csrf_exempt
 
 # @api_view(('GET',))

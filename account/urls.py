@@ -20,14 +20,17 @@ urlpatterns = [
     path('view_history_books/', views.view_history_book, name='view_history_book'),
 
     path('add_book/<int:id>/', views.add_book, name='add_book'),
-
-    # Flutter related
     path('get-rank-book-json/', views.show_json_by_highest_number, name='get_rank_book_json'),
     path('get-history-book-json/', views.show_json_history_book, name='get_history_book_json'),
+
+    # Flutter related
     path('get-profile-json/', views.show_json_profile, name='get_profile_json'),
     path('get-user-json/', views.show_json_user, name='show_json_user'),
     path('logout_flutter/', views.logout_user_flutter, name='logout_user_flutter'),
     path('change_password_flutter/', views.change_password_flutter, name='logout_user_flutter'),
+    path('get-history-book-json-flutter/', views.show_json_history_book_flutter, name='get_history_book_json_flutter'),
+    path('book_json_flutter/', views.view_book_json_flutter, name='view_book_json_flutter'),
+
 
 
 
