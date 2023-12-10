@@ -61,12 +61,23 @@ class ProfileSerializer(serializers.ModelSerializer):
         model = Profile
         fields = '__all__'
 
+from .models import Book, History_Book_To_Book
+from rest_framework import serializers
+
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
         fields = '__all__'
 
+class HistoryBookSerializer(serializers.ModelSerializer):
+    profile = ProfileSerializer()
+
+    class Meta:
+        model = History_Book
+        fields = '__all__'
+
 class HistoryBookToBookSerializer(serializers.ModelSerializer):
+    history_book = HistoryBookSerializer()
     book = BookSerializer()
 
     class Meta:
