@@ -29,6 +29,8 @@ urlpatterns = [
     path('logout_flutter/', views.logout_user_flutter, name='logout_user_flutter'),
     path('change_password_flutter/', views.change_password_flutter, name='logout_user_flutter'),
     path('get-history-book-json-flutter/', views.show_json_history_book_flutter, name='get_history_book_json_flutter'),
+    path('get-rank-book-json-flutter/', views.show_json_rank_book_flutter, name='get_history_book_json_flutter'),
+
     path('book_json_flutter/', views.view_book_json_flutter, name='view_book_json_flutter'),
 
 
