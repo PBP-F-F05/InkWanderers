@@ -191,14 +191,20 @@ def show_json_by_highest_number_flutter(request):
 
 @api_view(('GET',))
 def show_json_history_book_flutter(request):
-    user = request.user
-    profile = Profile.objects.filter(user = user)[0]
-    history_book = History_Book.objects.filter(profile = profile)[0]
-    data = History_Book_To_Book.objects.filter(history_book = history_book).order_by('-pk')
+    owner = Profile.objects.get(user=request.user)
+    history_book = History_Book.objects.filter(profile = owner)[0]
+    data = History_Book_To_Book.objects.filter(history_book=history_book).order_by('-pk')
     serializer = HistoryBookToBookSerializer(data, many=True)
+    return JsonResponse(data = serializer.data, safe = False)
 
-    return JsonResponse(data=serializer.data, safe=False)
-    
+@api_view(('GET',))
+def show_json_rank_book_flutter(request):
+    owner = Profile.objects.get(user=request.user)
+    rank_book = Rank_Book.objects.filter(profile = owner)[0]
+    data = Rank_Book_To_Book.objects.filter(rank_book=rank_book).order_by('-books_count')
+    serializer = RankBookToBookSerializer(data, many=True)
+    return JsonResponse(data = serializer.data, safe = False)
+   
 def view_book_json_flutter(request):
     data = Book.objects.all()
     serializers = BookSerializer(data, many = True)
