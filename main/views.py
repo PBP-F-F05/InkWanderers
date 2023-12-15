@@ -101,3 +101,11 @@ def remove_book_flutter(request):
         
     else:
         return JsonResponse({"status": "error"}, status=403)
+    
+@csrf_exempt
+def get_role(request):
+    if request.user.role == User.ADMIN:
+        return JsonResponse({"status": "admin"})
+        
+    else:
+        return JsonResponse({"status": "user"})
