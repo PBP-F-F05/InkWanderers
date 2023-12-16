@@ -1,3 +1,4 @@
+import json
 from django.contrib import messages
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
@@ -7,6 +8,7 @@ from book.models import Book
 from account.models import Profile
 from django.core import serializers
 from account.models import User
+from django.views.decorators.csrf import csrf_exempt
 
 
 @login_required
@@ -60,9 +62,50 @@ def get_books_json(request):
     data = BookmarkList.objects.filter(bookmarked_books=books).order_by('-pk')
 
     return HttpResponse(serializers.serialize('json', books))
+
+#flutter stuff
+
+def get_bookmarks(request):
+    user = Profile.objects.get(user = request.user)
+    bookmark_list, created = BookmarkList.objects.get_or_create(user=user)
+    bookmarked_books = bookmark_list.bookmarked_books.all()
+    return HttpResponse(serializers.serialize('json', bookmarked_books), content_type="application/json")
+
+@csrf_exempt
+def bookmark_book_flutter(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        book = Book.objects.get(pk=data["pk"])
+        user = Profile.objects.get(user=request.user)
+        bookmark_list, created = BookmarkList.objects.get_or_create(user=user)
+        if book in bookmark_list.bookmarked_books.all():
+            return JsonResponse({
+                "status": False,
+            }, status=500)  
+            
+        bookmark_list.bookmarked_books.add(book)
+        return JsonResponse({
+            "status": True,
+        }, status=200)
     
+    return JsonResponse({
+        "status": False,
+    }, status=500)  
 
+@csrf_exempt 
+def remove_bookmark_flutter(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        print(request.user)
+        print(data["pk"])
+        book = Book.objects.get(pk=data["pk"])
+        user = Profile.objects.get(user=request.user)
+        bookmark_list, created = BookmarkList.objects.get_or_create(user=user)
+        bookmark_list.bookmarked_books.remove(book)
+        return JsonResponse({
+            "status": True,
+        }, status=200)
 
-
-
-
+    return JsonResponse({
+        "status": False,
+    }, status=500) 
