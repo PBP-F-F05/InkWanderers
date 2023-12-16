@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.views import PasswordChangeView
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import login
+from requests import Response
 
 from .models import User
 from django.contrib.auth import authenticate
