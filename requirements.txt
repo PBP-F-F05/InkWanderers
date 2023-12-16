@@ -4,3 +4,8 @@ whitenoise
 psycopg2-binary
 requests
 urllib3
+djangorestframework
+django-environ
+django-mathfilters
+whitenoise
+django-cors-headers

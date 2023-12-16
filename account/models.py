@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 from django.db import models
 
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 
 from django.contrib.auth.models import AbstractUser, Permission
 class User(AbstractUser):
@@ -43,6 +43,24 @@ class History_Book_To_Book(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     date_added = models.DateField(auto_now_add=True)
 
+
+# === Flutter Serializer ===
+from .models import Book, History_Book_To_Book
+from rest_framework import serializers
+
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = '__all__'
+
+class ProfileSerializer(serializers.ModelSerializer):
+    user = UserSerializer()
+
+    class Meta:
+        model = Profile
+        fields = '__all__'
+
 from .models import Book, History_Book_To_Book
 from rest_framework import serializers
 
@@ -51,7 +69,15 @@ class BookSerializer(serializers.ModelSerializer):
         model = Book
         fields = '__all__'
 
+class HistoryBookSerializer(serializers.ModelSerializer):
+    profile = ProfileSerializer()
+
+    class Meta:
+        model = History_Book
+        fields = '__all__'
+
 class HistoryBookToBookSerializer(serializers.ModelSerializer):
+    history_book = HistoryBookSerializer()
     book = BookSerializer()
 
     class Meta:

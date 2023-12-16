@@ -1,7 +1,8 @@
 from audioop import reverse
+import json
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect, JsonResponse
 from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
 from account.models import User
@@ -63,3 +64,47 @@ def get_books_json(request):
         books = Book.objects.filter(is_borrowed=False)
     
     return HttpResponse(serializers.serialize('json', books))
+
+@csrf_exempt
+def create_book_flutter(request):
+    if request.method == 'POST':
+        
+        data = json.loads(request.body)
+        print(data)
+
+        new_product = Book.objects.create(
+            title = data["title"],
+            authors = data["authors"],
+            categories = data["categories"],
+            thumbnail =  data["thumbnail"],
+            description = data["description"],
+            published_year = int(data["published_year"])
+        )
+
+        new_product.save()
+        print("Book added to catalogue")
+        return JsonResponse({"status": "success"}, status=200)
+    
+    else:
+        print("gagal")
+        return JsonResponse({"status": "error"}, status=401)
+    
+    
+@csrf_exempt
+def remove_book_flutter(request):
+    if request.user.role == User.ADMIN:
+        data = json.loads(request.body)
+        book = Book.objects.get(pk=data["pk"])
+        book.delete()
+        return JsonResponse({"status": "success"}, status=200)
+        
+    else:
+        return JsonResponse({"status": "error"}, status=403)
+    
+@csrf_exempt
+def get_role(request):
+    if request.user.role == User.ADMIN:
+        return JsonResponse({"status": "admin"})
+        
+    else:
+        return JsonResponse({"status": "user"})

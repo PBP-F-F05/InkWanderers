@@ -21,6 +21,14 @@ def my_collections(request):
     }
     return render(request, 'my_collection.html', context)
 
+@csrf_exempt
+def collections_flutter(request):
+    owner = Profile.objects.get(user=request.user)
+    collection = Collection.objects.get(owner=owner)
+    collection_books = CollectionBook.objects.filter(collection=collection)
+    books = [cb.book for cb in collection_books]
+    return HttpResponse(serializers.serialize('json', books), content_type="application/json")
+
 @login_required
 def add_book_to_collection(request, book_id):
     
@@ -130,7 +138,7 @@ def remove_collection_flutter(request):
         data = json.loads(request.body)
         owner = Profile.objects.get(user = request.user)
         collection = Collection.objects.get(owner = owner)
-        book = Book.objects.get(pk = int(data["pk"]))
+        book = Book.objects.filter(id = int(data["pk"]))[0]
         collection_book = CollectionBook.objects.get(book = book, collection = collection)
         collection_book.delete()
         book.is_borrowed = False

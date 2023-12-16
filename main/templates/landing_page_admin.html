@@ -163,6 +163,13 @@
 
     document.getElementById("button_add").onclick = addProduct
     
+    function delete_product_ajax(ID) {
+      fetch(`remove_book_ajax/${ID}`, {
+          method: 'DELETE',
+      }).then(refreshProducts).then(refreshCard)
+      }
+    document.getElementById("remove-button").onclick = delete_product_ajax
+
   </script>
 {% endblock content %}
 

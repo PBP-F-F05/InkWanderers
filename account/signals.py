@@ -4,6 +4,7 @@ from .models import User, Profile, Rank_Book, History_Book
 from collection.models import Collection
 from bookmarks.models import BookmarkList
 
+
 @receiver(post_save, sender=User)
 def create_user_needs_class(sender, instance, created, **kwargs):
     if created:
@@ -13,8 +14,7 @@ def create_user_needs_class(sender, instance, created, **kwargs):
         rank_book.save()
         hisotry_book = History_Book(profile = user_profile)
         hisotry_book.save()
-        owner = Profile.objects.filter(user = instance)[0]
-        collection = Collection(owner= owner)
+        collection = Collection(owner= user_profile)
         collection.save()
-        bookmark_list = BookmarkList(user=owner)
+        bookmark_list = BookmarkList(user=user_profile)
         bookmark_list.save()
