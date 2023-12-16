@@ -10,8 +10,9 @@ class Review(models.Model):
     review = models.TextField()
 
 from rest_framework import serializers
-from account.models import BookSerializer
+from account.models import BookSerializer, UserSerializer
 class ReviewSerializer(serializers.ModelSerializer):
+    user = UserSerializer()
     book = BookSerializer()
 
     class Meta:
